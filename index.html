@@ -5,47 +5,184 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
-        .grid-item 
-        {
-            @apply h-40 border-2 border-gray-100 flex justify-center items-center rounded-md
+      .grid-item {
+            @apply h-40 border-2 border-gray-100 flex justify-center items-center rounded-md;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
         }
     </style>
-
     <title>Web Porto</title>
 </head>
-<body class="bg-blue-200"> 
 
-      <div class="bg-blue-950  border-white border-b-2 "> 
-        <div class=" sm:flex justify-between container mx-auto py-3 sm: text-center " > 
-            <h1 class="text-2xl font-bold text-white"> Nabilfathan's</h1>
-            <ul class="flex text-white space-x-10 items-center sm: justify-center">
-                <li><a href="">About</a> </li>
-                <li><a href="">Portofolio</a></li>
-                <li><a href="">Contact</a></li>
+<body class="bg-gray-100">
+
+    <div class="bg-black border-b-8 border-black">
+        <div class="container mx-auto py-3 sm:flex justify-between items-center sm: text-center ">
+            <h1 class="text-2xl font-bold text-white">Nabilfathan's</h1>
+            <ul class="flex text-white space-x-10 items-center  sm: justify-center">
+                <li><a href="#about" class="hover:text-gray-300">About</a></li>
+                <li><a href="#portfolio" class="hover:text-gray-300">Portofolio</a></li>
+                <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
             </ul>
         </div>
-      </div>
+    </div>
 
+    <audio autoplay loop>
+        <source src="Pluto Melody.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!--
       <div class="w-2/4 border-2 border-gray-400 mx-auto my-5 min-h-10 min-w-90 p-5 bg-gray-100 rounded-xl">
         <h3 class="text-3xl font-bold text-center mb-3"> Website is Under Construction </h3>
         <p class="text-center mb-3">
             Mohon bersabar, website masih di tahap pembuatan.
             Dukung saya melalui link dibawah :)   
         </p>
-        <p class="text-center text-blue-600"> <a href="https://saweria.co/Nabilfathan"> https://saweria.co/Nabilfathan</a></p>
-      </div>
+        <p class="text-center md:text-lg text-blue-600"> <a href="https://saweria.co/Nabilfathan">
+                https://saweria.co/Nabilfathan</a></p>
+        </div>
+        <video class=absolute top-0 left-0 w-full h-full object cover src="Foto.mp4" autoplay muted loop></video>
+        <section class="bg-gray-900 h-screen flex items-center justify-center">
+            <div class="relative z-10 container px-4 py-10 text-center">
+                <h1 class="text-8xl font-extrabold text-white fade-in hover:scale-105 transition-transform duration-300">Hello
+                </h1>
+                <h2 class="text-5xl font-bold text-white mt-4">Welcome to My Website</h2>
+                <p class="text-gray-300 mt-4">Saya Nabil Alfathan, mahasiswa Universitas Riau</p>
+            </div>
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+        </section>
+        -->
+        <section class="relative bg-gray-900 h-screen flex items-center justify-center overflow-hidden">
+            <!-- Video sebagai background -->
+            <video class="absolute top-0 left-0 w-full h-full object-cover" src="Bg Home.webm" autoplay muted loop></video>
         
-      <h3 class="text-center text-2xl font-semibold">Portofolio</h3>
-        <div class="w-4/6 my-5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 text-lg">
-            <div class="grid-item">01</div>
-            <div class="grid-item">02</div>
+            <!-- Konten di atas video -->
+            <div class="relative z-10 container px-4 py-10 text-center">
+                <h1 class="text-8xl font-extrabold text-white fade-in hover:scale-105 transition-transform duration-300">
+                    Hello
+                </h1>
+                <h2 class="text-5xl font-bold text-white mt-4">Welcome to My Website</h2>
+                <p class="text-gray-300 mt-4">Saya Nabil Alfathan, mahasiswa Universitas Riau</p>
+            </div>
+        
+            <!-- Overlay untuk efek gelap -->
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+        </section>
+        
+        <section id="about" class="bg-white py-10 h-screen">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-10">
+                    <h2 class="text-5xl font-bold">About Me</h2>
+                    <p class="text-gray-600 mt-4">Kenali saya lebih dekat</p>
+                </div>
+                <div class="flex flex-col lg:flex-row items-center">
+                    <div class="lg:w-1/3 mb-8 lg:mb-0">
+                        <img src="Profil.jpg" alt="Profile Picture"
+                            class="rounded-full w-64 h-64 mx-auto hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="lg:w-2/3 lg:pl-10">
+                        <p class="text-xl lg:text-2xl font-normal text-left mb-4">Kenalkan saya Nabil Alfathan yang merupakan
+                            mahasiswa
+                            Universitas Riau Fakultas Teknik jurusan teknik Informatika. Saya memiliki ketertarikan dan minat
+                            yang tinggi kepada kemajuan teknologi. Sangat senang jika saya dapat menjadi orang yang terkemuka di
+                            bidang teknologi.</p>
+                        <p class="text-xl lg:text-2xl font-normal text-left mb-4">
+                            Alasan saya memilih jurusan Teknik Informatika adalah saya ingin menjadi seorang yang dapat terlibat
+                            dalam
+                            perkembangan teknologi yang sangat pesat. Saya ingin menjadi seorang yang dapat memberikan
+                            kontribusi dalam
+                            perkembangan teknologi. Saya juga ingin menjadi seorang yang dapat memberikan solusi atas
+                            permasalahan yang ada melalui teknologi.
+                        </p>
+                        <p class="text-xl lg:text-2xl font-normal text-left mb-4">
+                            Saya memiliki sedikit kemampuan dalam pemrograman, desain, dan pengembangan aplikasi. Saya juga
+                            memiliki ketertarika
+                            kepada vidography dan photogrphy dan juga memilik sedikit kemampuan seperti editing video & foto
+                            yang mungkin
+                            hasilnya bisa dilihat di portofolio saya.
+                        </p>
+        
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        
+        <section id="portfolio" class="bg-gray-900 py-10 lg:h-screen pb-5 ">
+            <div class="pb-8 container mx-auto px-4">
+                <div class="text-center mb-10">
+                    <h2 class="text-5xl font-bold text-white">Portofolio</h2>
+                    <p class="text-gray-300 mt-4">Lihat hasil karya saya</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="bg-white rounded-lg p-4 hover:shadow-lg transition-shadow duration-300">
+                        <img src="Portofolio Submission_002.png" alt="Project 1" class="rounded-lg w-full h-64 object-cover">
+                        <h3 class="text-2xl font-semibold mt-4">Design Graphic</h3>
+                        <p class="text-gray-600 mt-2">Menjadi Tim kreatif acara tahunan sekolah</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 hover:shadow-lg transition-shadow duration-300">
+                        <video src="Ngopi.mp4" alt="Project 2" class="rounded-lg w-full h-64 object-cover" controls></video>
+                        <h3 class="text-2xl font-semibold mt-4">Videogrphy</h3>
+                        <p class="text-gray-600 mt-2">Salah satu karya saya di videography</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 hover:shadow-lg transition-shadow duration-300">
+                        <img src="DSC03116.JPG" alt="Project 3" class="rounded-lg w-full h-64 object-cover">
+                        <h3 class="text-2xl font-semibold mt-4">Photography</h3>
+                        <p class="text-gray-600 mt-2">Hal yang mengekspresikan diri</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 hover:shadow-lg transition-shadow duration-300">
+                        <img src="Portofolio Submission_003.png" alt="Project 4" class="rounded-lg w-full h-64 object-cover">
+                        <h3 class="text-2xl font-semibold mt-4">Teamwork</h3>
+                        <p class="text-gray-600 mt-2">Menjadi Tim penanggung jawab Album kenangan Angkatan</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 hover:shadow-lg transition-shadow duration-300">
+                        <video src="SuperPower.mp4" alt="Project 5" class="rounded-lg w-full h-64 object-cover"
+                            controls></video>
+                        <h3 class="text-2xl font-semibold mt-4">Video Editor</h3>
+                        <p class="text-gray-600 mt-2">Sedikit skill menggunakan After Effect</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 hover:shadow-lg transition-shadow duration-300">
+                        <img src="Web Porto.png" alt="Project 6" class="rounded-lg w-full h-64 object-cover">
+                        <h3 class="text-2xl font-semibold mt-4">Web Builder (Masih belajar)</h3>
+                        <p class="text-gray-600 mt-2">Masih dipelajari</p>
+                    </div>
+                </div>
+            </div>
+
+    <!--<h3 class="text-center text-2xl font-semibold">Portofolio</h3>
+        <div class="w-4/6 my-5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 text-lg font-semibold">
+            <div class="grid-item">Our Partner</div>
+            <div class="grid-item">Sponsorship</div>
             <div class="grid-item">03</div>
             <div class="grid-item">04</div>
             <div class="grid-item">05</div>
             <div class="grid-item">06</div>
-        </div>
+        </div> -->
+        
+        </body>
+        
+        <foot id="contact" class="bg-gray-900 py-10">
+            <h3 class="text-center font-bold items-center bg-white lg:text-4xl py-10">Need more Help? Contact Us</h3>
+            <div class="place-items-stretch ">
+                <div
+                    class=" min-h-screen w-screen mx-auto items-center lg:justify-between bg-gray-950 border-white u-2 text-white  justify-stretch p-20  ">
+                    <h2 class="text-2xl lg:text-3xl font-bold text-left px-8">Contact Us</h2>
+                    <p class="text-gray-300 mt-4">Hubungi saya melalui media sosial dibawah ini</p>
+                    <ul class="space-y-2  font-normal lg:text-lg text-left mt-4">
+                        <li><a href="www.instagram.com/@nabilfathan_" class="hover:text-gray-300">Instagram</a></li>
+                        <li><a href="www.linkedin.com/nabil-alfathan" class="hover:text-gray-300">LinkedIn</a></li>
+                        <li><a href="www.tiktok.com/@nabilfathan_" class="hover:text-gray-300">TikTok</a></li>
+                        <li><a href="#" class="hover:text-gray-300">(+62)8xx xxxx xxxx</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Twitter</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+            </foot>
 
-    </header>
-
-</body>
 </html>
