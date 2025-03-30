@@ -22,10 +22,13 @@
 <body class="bg-gray-100">
 
     <div class="bg-black border-b-8 border-black">
-        <div class="container mx-auto py-3 sm:flex justify-between items-center sm: text-center ">
+        <div class="container mx-auto py-3 sm:flex justify-between items-center sm: text-center">
             <h1 class="text-2xl font-bold text-white">Nabilfathan's</h1>
-            <ul class="flex text-white space-x-10 items-center  sm: justify-center">
+            <ul class="flex text-white lg:space-x-10 sm:space-x-8  items-center sm: justify-center pl-4">
+                <li><a href="#home" class="hover:text-gray-300">Home</a></li>
                 <li><a href="#about" class="hover:text-gray-300">About</a></li>
+                <li><a href="#skills" class="hover:text-gray-300">Skills</a></li>
+                <li><a href="#experience" class="hover:text-gray-300">Experience</a></li>
                 <li><a href="#portfolio" class="hover:text-gray-300">Portofolio</a></li>
                 <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
             </ul>
@@ -37,117 +40,192 @@
         <p>If you can read this, your browser does not support the audio element.</p>
     </audio>
     
-    <!--
-      <div class="w-2/4 border-2 border-gray-400 mx-auto my-5 min-h-10 min-w-90 p-5 bg-gray-100 rounded-xl">
-        <h3 class="text-3xl font-bold text-center mb-3"> Website is Under Construction </h3>
-        <p class="text-center mb-3">
-            Mohon bersabar, website masih di tahap pembuatan.
-            Dukung saya melalui link dibawah :)   
-        </p>
-        <p class="text-center md:text-lg text-blue-600"> <a href="https://saweria.co/Nabilfathan">
-                https://saweria.co/Nabilfathan</a></p>
-        </div>
-        <video class=absolute top-0 left-0 w-full h-full object cover src="Foto.mp4" autoplay muted loop></video>
-        <section class="bg-gray-900 h-screen flex items-center justify-center">
-            <div class="relative z-10 container px-4 py-10 text-center">
-                <h1 class="text-8xl font-extrabold text-white fade-in hover:scale-105 transition-transform duration-300">Hello
-                </h1>
-                <h2 class="text-5xl font-bold text-white mt-4">Welcome to My Website</h2>
-                <p class="text-gray-300 mt-4">Saya Nabil Alfathan, mahasiswa Universitas Riau</p>
-            </div>
-            <div class="absolute inset-0 bg-black opacity-50"></div>
-        </section>
-        -->
-        <section class="relative bg-gray-900 h-screen flex items-center justify-center overflow-hidden">
+        <section id="home" class="relative bg-gray-900 h-screen flex items-center justify-center overflow-hidden">
             <!-- Video sebagai background -->
             <video class="absolute top-0 left-0 w-full h-full object-cover" src="asset/Bg Home.webm" autoplay muted loop
                 playsinline></video>
         
             <!-- Konten di atas video -->
             <div class="relative z-10 container px-4 py-10 text-center">
+                <h2 class="text-3xl font-bold text-white mt-4">I'm</h2>
                 <h1 class="text-8xl font-extrabold text-white fade-in hover:scale-105 transition-transform duration-300">
-                    Hello
+                    Nabil Alfathan
                 </h1>
-                <h2 class="text-5xl font-bold text-white mt-4">Welcome to My Website</h2>
-                <p class="text-gray-300 mt-4">Saya Nabil Alfathan, mahasiswa Universitas Riau</p>
+                <h2 class="text-3xl font-bold text-white mt-2">Welcome to My Website</h2>
+                <p class="text-gray-300 mt-2">I am an informatics engineering student</p>
             </div>
         
             <!-- Overlay untuk efek gelap -->
-            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="absolute inset-0 bg-black opacity-80"></div>
         </section>
         
         <section id="about" class="bg-white py-10 min-h-screen sm:h-auto ">
-            <div class="container mx-auto px-4 sm:h-screen pb-20">
+            <div class="container mx-auto px-4 min-h-screen ">
                 <div class="text-center mb-10">
                     <h2 class="text-5xl font-bold">About Me</h2>
                     <p class="text-gray-600 mt-4">Kenali saya lebih dekat</p>
                 </div>
-                <div class="flex flex-col lg:flex-row items-center">
+                <div class="flex flex-col lg:flex-row fade-in">
                     <div class="lg:w-1/3 mb-8 lg:mb-0">
                         <img src="asset/Profil.jpg" alt="Profile Picture"
-                            class="rounded-full w-64 h-64 mx-auto hover:scale-105 transition-transform duration-300">
+                            class="rounded-full  lg:w-96 lg:h-96 lg:scale-150 w-64 h-64 lg:mt-36 items-center mx-auto lg:mx-10 hover:scale-110 transition-transform duration-300">
                     </div>
-                    <div class="lg:w-2/3 lg:pl-10">
-                        <p class="text-xl lg:text-2xl font-normal text-left mb-4">Kenalkan saya Nabil Alfathan yang merupakan
+                    <div class="lg:w-2/3 lg:pl-10 lg:pt-5">
+                        <p class="text-xl lg:text-2xl font-normal text-justify mb-4">Kenalkan saya <b>Nabil Alfathan</b> yang merupakan
                             mahasiswa
                             Universitas Riau Fakultas Teknik jurusan teknik Informatika. Saya memiliki ketertarikan dan minat
                             yang tinggi kepada kemajuan teknologi. Sangat senang jika saya dapat menjadi orang yang terkemuka di
                             bidang teknologi.</p>
-                        <p class="text-xl lg:text-2xl font-normal text-left mb-4">
-                            Alasan saya memilih jurusan Teknik Informatika adalah saya ingin menjadi seorang yang dapat terlibat
-                            dalam
-                            perkembangan teknologi yang sangat pesat. Saya ingin menjadi seorang yang dapat memberikan
-                            kontribusi dalam
-                            perkembangan teknologi. Saya juga ingin menjadi seorang yang dapat memberikan solusi atas
-                            permasalahan yang ada melalui teknologi.
+                        <p class="text-xl lg:text-2xl font-normal text-justify mb-4">
+                            Alasan saya memilih jurusan Teknik Informatika adalah karena saya memiliki minat yang besar dalam dunia teknologi
+                            dan
+                            ingin terlibat langsung dalam perkembangannya yang
+                            sangat pesat. Saya ingin menjadi seseorang yang tidak hanya mengikuti perkembangan teknologi, tetapi juga
+                            berkontribusi
+                            secara aktif dalam menciptakan inovasi dan solusi
+                            yang dapat memberikan manfaat bagi banyak orang. Saya percaya bahwa teknologi memiliki potensi besar untuk
+                            menyelesaikan
+                            berbagai permasalahan di berbagai bidang,
+                            dan saya ingin menjadi bagian dari perubahan tersebut.
                         </p>
-                        <p class="text-xl lg:text-2xl font-normal text-left mb-4">
-                            Saya memiliki sedikit kemampuan dalam pemrograman, desain, dan pengembangan aplikasi. Saya juga
-                            memiliki ketertarika
-                            kepada vidography dan photogrphy dan juga memilik sedikit kemampuan seperti editing video & foto
-                            yang mungkin hasilnya bisa dilihat di portofolio saya.
+                        <p class="text-xl lg:text-2xl font-normal text-justify mb-4">
+                            Saat ini, saya memiliki sedikit kemampuan dalam pemrograman, desain, serta pengembangan aplikasi. Saya terus belajar
+                            dan
+                            mengasah keterampilan saya
+                            agar dapat menciptakan solusi yang lebih efektif dan efisien. Selain itu, saya juga memiliki ketertarikan yang cukup
+                            besar pada bidang videografi dan fotografi.
+                            Saya menikmati proses pengambilan gambar serta pengeditan video dan foto, yang memungkinkan saya untuk menyalurkan
+                            kreativitas saya dalam bentuk visual.
+                            Beberapa hasil karya saya dapat dilihat di portofolio saya sebagai bukti dari keterampilan yang saya miliki.
                         </p>
-        
+                        <p class="text-xl lg:text-2xl font-normal text-justify mb-4">
+                            Saya percaya bahwa kombinasi antara pengetahuan teknis dan kreativitas adalah kunci untuk menciptakan solusi yang
+                            inovatif
+                            dan efektif. Oleh karena itu, saya selalu berusaha untuk mengembangkan diri dalam kedua aspek tersebut.
+                            Dengan kombinasi minat dan keterampilan ini, saya berharap dapat mengembangkan diri lebih jauh dalam dunia teknologi
+                            dan industri kreatif, serta mampu memberikan dampak positif melalui inovasi dan solusi berbasis teknologi.
+                        </p>
+                        
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        </section>
+                        
+                        <section id="skills" class="bg-black py-10 min-h-screen overflow-hidden">
+                            <div class="container mx-auto px-4 pb-20">
+                                <div class="text-center mb-10">
+                                    <h2 class="text-5xl font-bold text-white">Skills</h2>
+                                    <p class="text-gray-200 mt-4">Kemampuan yang saya miliki</p>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                    <div class="bg-white rounded-lg p-4  hover:scale-105 transition-transform duration-300">
+                                        <img src="asset/Dsgn.jpg" alt="Skills" class="rounded-lg w-full h-64 object-cover">
+                                        <h3 class="text-2xl font-semibold">Design Graphic</h3>
+                                        <p class="text-gray-600 mt-2">Kemampuan dalam desain grafis menggunakan software seperti Adobe
+                                            Photoshop dan CorelDRAW.</p>
+                                    </div>
+                                    <div class="bg-white rounded-lg p-4  hover:scale-105 transition-transform duration-300">
+                                        <img src="asset/1.png" alt="Skills" class="rounded-lg w-full h-64 object-cover">
+                                        <h3 class="text-2xl font-semibold">Videography</h3>
+                                        <p class="text-gray-600 mt-2">Kemampuan dalam pengambilan gambar dan editing video menggunakan
+                                            software seperti Adobe Premiere Pro.</p>
+                                    </div>
+                                    <div class="bg-white rounded-lg p-4  hover:scale-105 transition-transform duration-300">
+                                        <img src="asset/DSC03116.JPG" alt="Skills" class="rounded-lg w-full h-64 object-cover">
+                                        <h3 class="text-2xl font-semibold">Photography</h3>
+                                        <p class="text-gray-600 mt-2">Kemampuan dalam pengambilan gambar dan editing foto menggunakan
+                                            software seperti Adobe Lightroom.</p>
+                                    </div>
+                                    <div class="bg-white rounded-lg p-4  hover:scale-105 transition-transform duration-300">
+                                        <img src="asset/FishEye.jpg" alt="Skills" class="rounded-lg w-full h-64 object-cover">
+                                        <h3 class="text-2xl font-semibold">Teamwork</h3>
+                                        <p class="text-gray-600 mt-2">Kemampuan dalam bekerja sama dalam tim untuk mencapai tujuan
+                                            bersama.</p>
+                                    </div>
+                                    <div class="bg-white rounded-lg p-4  hover:scale-105 transition-transform duration-300">
+                                        <img src="asset/edit.jpg" alt="Skills" class="rounded-lg w-full h-64 object-cover">
+                                        <h3 class="text-2xl font-semibold">Video Editing</h3>
+                                        <p class="text-gray-600 mt-2">Kemampuan dalam mengedit video menggunakan software seperti Adobe
+                                            After Effects.</p>
+                                    </div>
+                                    <div class="bg-white rounded-lg p-4  hover:scale-105 transition-transform duration-300">
+                                        <img src="asset/web.jpg" alt="Skills" class="rounded-lg w-full h-64 object-cover">
+                                        <h3 class="text-2xl font-semibold">Web Development</h3>
+                                        <p class="text-gray-600 mt-2">Kemampuan dalam membangun website menggunakan HTML, CSS, dan JavaScript.
+                        </p>
                     </div>
+                    </div>
+                    </div>
+                    </section>
+        
+        <section id="experience" class="bg-black py-10 min-h-screen overflow-hidden">
+            <div class="container mx-auto px-4 pb-20">
+                <div class="text-center mb-10">
+                    <h2 class="text-5xl font-bold text-white">Experience</h2>
+                    <p class="text-gray-300 mt-4">Pengalaman yang saya miliki</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:h-svh">
+                    <div class="bg-white rounded-lg p-5  hover:scale-105 transition-transform duration-300 hover:bg-slate-200 ">
+                        <img src="asset/lnyd.jpg" alt="Skills" class="w-full h-auto mx-auto mb-4 object-cover">
+                        <h3 class="text-2xl font-semibold">CO Kominfo</h3>
+                        <p class="text-gray-600 mt-2">Menjadi PJ divisi Kominfo di pengurusan sekolah. Mendapat kepercayaan
+                            untuk memegang tanggung jawab terkait
+                            media komunikasi dan informasi di sekolah, seperti design flyer, banner, dan pemberian informasi di mading
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-lg p-5  hover:scale-105 transition-transform duration-300 hover:bg-slate-200 ">
+                        <img src="asset/tim.jpg" alt="Skills" class="w-full h-auto mx-auto mb-4">
+                        <h3 class="text-2xl font-semibold">Tim Kreatif</h3>
+                        <p class="text-gray-600 mt-2">Menjadi Tim kreatif acara tahunan sekolah yang merupakan acara besar yang
+                            dijalankan
+                            oleh santri di pengurusan yang masuk dalam program kerja ketua organisasi. Dan disana saya
+                            mendapatkan kesempatan
+                            untuk menambah pengalaman di design graphic dan motion graphic sederhana
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-lg p-5  hover:scale-105 transition-transform duration-300 hover:bg-slate-200  ">
+                        <img src="asset/FishEye.jpg" alt="Skills" class="w-full h-auto mx-auto mb-4">
+                        <h3 class="text-2xl font-semibold">Tim Penanggung Jawab Album Kenangan</h3>
+                        <p class="text-gray-600 mt-2">Menjadi Tim penanggung jawab Album kenangan Angkatan. Mendapatkan kepercayaan oleh angkatan kepada kami sebagai tim
+                            penanggung jawab untuk mengurus album kenangan angkatan. Dan disana saya mendapatkan kesempatan untuk
+                            menambah pengalaman di design graphic dan sebagai media untuk melatih kreativitas.
+                        </p>
+                    </div>
+                
                 </div>
             </div>
-            </div>
         </section>
-        
-        <section id="portfolio" class="bg-gray-900 py-10 lg:min-h-screen pb-5 ">
-            <div class="pb-8 container mx-auto px-4">
+
+        <section id="portfolio" class="bg-gray-900 pt-10 lg:min-h-screen pb-5 ">
+            <div class="pb-16 container mx-auto px-4">
                 <div class="text-center mb-10">
                     <h2 class="text-5xl font-bold text-white">Portofolio</h2>
                     <p class="text-gray-300 mt-4">Lihat hasil karya saya</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div class="bg-white rounded-lg p-4 hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-white rounded-lg p-4 hover:shadow-lg hover:bg-slate-200 transition-colors duration-300">
                         <img src="asset/Portofolio Submission_002.png" alt="Project 1" class="rounded-lg w-full h-64 object-cover">
                         <h3 class="text-2xl font-semibold mt-4">Design Graphic</h3>
                         <p class="text-gray-600 mt-2">Menjadi Tim kreatif acara tahunan sekolah</p>
                     </div>
-                    <div class="bg-white rounded-lg p-4 hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-white rounded-lg p-4 hover:shadow-lg hover:bg-slate-200 transition-shadow duration-300">
                         <video src="asset/Ngopi.mp4" alt="Project 2" class="rounded-lg w-full h-64 object-cover" controls></video>
                         <h3 class="text-2xl font-semibold mt-4">Videogrphy</h3>
                         <p class="text-gray-600 mt-2">Salah satu karya saya di videography</p>
                     </div>
-                    <div class="bg-white rounded-lg p-4 hover:shadow-lg transition-shadow duration-300">
-                        <img src="asset/DSC03116.JPG" alt="Project 3" class="rounded-lg w-full h-64 object-cover">
-                        <h3 class="text-2xl font-semibold mt-4">Photography</h3>
-                        <p class="text-gray-600 mt-2">Hal yang mengekspresikan diri</p>
-                    </div>
-                    <div class="bg-white rounded-lg p-4 hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-white rounded-lg p-4 hover:shadow-lg hover:bg-slate-200 transition-shadow duration-300">
                         <img src="asset/Portofolio Submission_003.png" alt="Project 4" class="rounded-lg w-full h-64 object-cover">
                         <h3 class="text-2xl font-semibold mt-4">Teamwork</h3>
                         <p class="text-gray-600 mt-2">Menjadi Tim penanggung jawab Album kenangan Angkatan</p>
                     </div>
-                    <div class="bg-white rounded-lg p-4 hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-white rounded-lg p-4 hover:shadow-lg hover:bg-slate-200 transition-shadow duration-300">
                         <video src="asset/SuperPower.mp4" alt="Project 5" class="rounded-lg w-full h-64 object-cover"
                             controls></video>
                         <h3 class="text-2xl font-semibold mt-4">Video Editor</h3>
                         <p class="text-gray-600 mt-2">Sedikit skill menggunakan After Effect</p>
                     </div>
-                    <div class="bg-white rounded-lg p-4 hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-white rounded-lg p-4 hover:shadow-lg hover:bg-slate-200 transition-shadow duration-300">
                         <img src="asset/Web Porto.png" alt="Project 6" class="rounded-lg w-full h-64 object-cover">
                         <h3 class="text-2xl font-semibold mt-4">Web Builder (Masih belajar)</h3>
                         <p class="text-gray-600 mt-2">Masih dipelajari</p>
@@ -165,25 +243,51 @@
             <div class="grid-item">06</div>
         </div> -->
         
-        </body>
-        
-        <foot id="contact" class="bg-gray-900 py-10">
-            <h3 class="text-center font-bold items-center bg-white lg:text-4xl py-10">Need more Help? Contact Us</h3>
+    </body>
+    <foot>
+        <section id="contact" class="bg-gray-950 pt-10 sm:pb-48">
+            <h3 class="text-center font-bold items-center bg-white lg:text-4xl py-10 mb-5">Need more Help? Contact Us</h3>
             <div class="place-items-stretch ">
-                <div
-                    class=" min-h-screen w-screen mx-auto items-center lg:justify-between bg-gray-950 border-white u-2 text-white  justify-stretch p-20  ">
-                    <h2 class="text-3xl lg:text-4xl font-bold text-left ">Contact Us</h2>
-                    <p class="text-gray-300 text-lg lg:text-xl mt-4">Hubungi saya melalui media sosial dibawah ini :</p>
-                    <ul class="space-y-2  font-normal text:xl lg:text-lg text-left mt-4">
-                        <li><a href="https://www.instagram.com/nabilfathan_/#" class="hover:text-gray-300">Instagram</a></li>
-                        <li><a href="https://www.linkedin.com/in/nabil-alfathan-9787312a7/overlay" class="hover:text-gray-300">LinkedIn</a></li>
-                        <li><a href="https://www.tiktok.com/@nabilfathan_?" class="hover:text-gray-300">TikTok</a></li>
-                        <li><a href="wa.me/6281213515433" class="hover:text-gray-300">Whatsapp</a></li>
-                        <li><a href="#" class="hover:text-gray-300">Twitter</a></li>
-                        <li><a href="https://www.facebook.com/share/1ALm7j8Yjq/" class="hover:text-gray-300">Facebook</a></li>
-                    </ul>
-                </div>
-            </div>
-            </foot>
-
-</html>
+                    <div class="flex flex-col items-center mt-8 pt-8 text-left">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-9/12 h-96">
+                            <div class=" bg-gray-950 items-center rounded-xl p-2 ">
+                                <h2 class="text-2xl font-semibold text-white pl-2">About</h2>
+                                <p class="text-md text-white text-justify pt-2 pl-2">Seorang yang sedang menempuh pendidikan di Universitas
+                                    Riau
+                                    Fakultas Teknik jurusan Teknik Informatika. Memiliki ketertarikan dan minat yang tinggi kepada kemajuan
+                                    teknologi.
+                                    Sangat senang jika saya dapat menjadi orang yang terkemuka di bidang teknologi.</p>
+                                </p>
+                            </div>
+                    
+                            <div class="bg-gray-950 rounded-xl p-2 ">
+                                <h2 class="text-2xl font-semibold text-white pl-2">Contact</h2>
+                                <ul class=" font-normal text-white text:xl lg:text- text-left pt-2 pl-2">
+                                    <li><a href="https://www.instagram.com/nabilfathan_/#" class="hover:text-gray-300">Instagram :
+                                            @nabilfathan_</a></li>
+                                    <li><a href="https://www.linkedin.com/in/nabil-alfathan-9787312a7/overlay"
+                                            class="hover:text-gray-300">LinkedIn : Nabil Alfathan</a></li>
+                                    <li><a href="https://www.tiktok.com/@nabilfathan_?" class="hover:text-gray-300">TikTok :
+                                            @nabilfathan_</a></li>
+                                    <li><a href="wa.me/6281213515433" class="hover:text-gray-300">Whatsapp : +62 81213515433</a></li>
+                                    <li><a href="#" class="hover:text-gray-300">Twitter</a></li>
+                                    <li><a href="https://www.facebook.com/share/1ALm7j8Yjq/" class="hover:text-gray-300">Facebook</a></li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-950 rounded-xl p-2 ">
+                                <h2 class="text-2xl font-semibold text-white pl-2 pb-2">Back To</h2>
+                                <p class="text-md text-white pl-2"> <a href="#home" class="hover:text-gray-300">Home</a></p>
+                                <p class="text-md text-white pl-2"> <a href="#about" class="hover:text-gray-300">About</a></p>
+                                <p class="text-md text-white pl-2"> <a href="#skills" class="hover:text-gray-300">Skills</a></p>
+                                <p class="text-md text-white pl-2"> <a href="#experience" class="hover:text-gray-300">Experience</a></p>
+                                <p class="text-md text-white pl-2"> <a href="#portfolio" class="hover:text-gray-300">Portfolio</a></p>
+                                <p class="text-md text-white pl-2"> <a href="#contact" class="hover:text-gray-300">Contact</a></p>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                        </section>
+                        <div class="flex flex-col bg-gray-950 text-white lg:py-4 py-64 text-center "><p>&copy; 2025 Nabil Alfathan. All rights reserved.</p></div>
+    </foot>
+    
+    </html>
