@@ -11,9 +11,7 @@
     <style src="style.css"></style>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <style type="text/tailwindcss">
-      .grid-item {
-            @apply h-40 border-2 border-gray-100 flex justify-center items-center rounded-md;
-        }
+      
         @keyframes fadeIn {
             0% { opacity: 0; transform: translateY(-20px); }
             100% { opacity: 1; transform: translateY(0); }
@@ -109,8 +107,8 @@
         <section id="about" class="group bg-neutral-950 py-10 min-h-screen sm:h-auto scroll-smooth">
             <div class="container mx-auto px-4 min-h-screen ">
                 <div class="text-center mb-10">
-                    <h2 class="text-5xl font-bold text-white">About Me</h2>
-                    <p class="text-gray-600 mt-4">Kenali saya lebih dekat</p>
+                    <h2 class="text-5xl font-bold text-white pop">About Me</h2>
+                    <p class="text-gray-600 mt-4 fade">Kenali saya lebih dekat</p>
                 </div>
                 <div class="flex flex-col lg:flex-row sm:mx-8">
                     <div class="lg:w-1/3 mb-8 lg:mb-0">
@@ -163,8 +161,8 @@
         <section id="skills" class="bg-neutral-950 py-10 min-h-screen overflow-hidden">
             <div class="container mx-auto px-4 pb-20">
                 <div class="text-center lg:mb-10">
-                    <h2 class="text-5xl font-bold text-white">Skills</h2>
-                    <p class="text-gray-200 mt-4">Kemampuan yang saya miliki</p>
+                    <h2 class="text-5xl font-bold text-white pop">Skills</h2>
+                    <p class="text-gray-200 mt-4 fade">Kemampuan yang saya miliki</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 scale-90 lg:scale-100">
                     <div
@@ -216,8 +214,8 @@
         <section id="experience" class="bg-neutral-950 py-10 min-h-screen overflow-hidden">
             <div class="container mx-auto px-4 pb-20">
                 <div class="text-center lg:mb-10">
-                    <h2 class="text-5xl font-bold text-white">Experience</h2>
-                    <p class="text-gray-300 mt-4">Pengalaman yang saya miliki</p>
+                    <h2 class="text-5xl font-bold text-white pop">Experience</h2>
+                    <p class="text-gray-300 mt-4 fade">Pengalaman yang saya miliki</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:h-svh scale-90 lg:scale-100">
                     <div
@@ -257,8 +255,8 @@
         <section id="portfolio" class="bg-neutral-950 pt-10 lg:min-h-screen pb-5 ">
             <div class="pb-16 container mx-auto px-4">
                 <div class="text-center lg:mb-10">
-                    <h2 class="text-5xl font-bold text-white">Portofolio</h2>
-                    <p class="text-gray-300 mt-4">Lihat hasil karya saya</p>
+                    <h2 class="text-5xl font-bold text-white pop">Portofolio</h2>
+                    <p class="text-gray-300 mt-4 fade">Lihat hasil karya saya</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 scale-90 lg:scale-100">
                     <div
@@ -306,7 +304,8 @@
     </body>
     <foot>
         <section id="contact" class="bg-neutral-950 pt-10 sm:pb-48">
-            <h3 class="text-center font-bold items-center bg-white lg:text-4xl py-10 mb-5">Need more Help? Contact Us</h3>
+            <h3 class="text-center font-bold items-center bg-white lg:text-4xl py-10 mb-5 slide fade">Need more Help? Contact Us
+            </h3>
             <div class="place-items-stretch ">
                 <div class="flex flex-col items-center mt-8 pt-8 text-left">
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-9/12 h-auto lg:h-96 mx-auto">
@@ -333,12 +332,12 @@
                             </div>
                             <div class="bg-neutral-950 rounded-xl p-2 ">
                                 <h2 class="text-2xl font-semibold text-white pl-2 pb-2">Back To</h2>
-                                <p class="text-md text-white pl-2"> <a href="#home" class="hover:text-gray-300">Home</a></p>
-                                <p class="text-md text-white pl-2"> <a href="#about" class="hover:text-gray-300">About</a></p>
-                                <p class="text-md text-white pl-2"> <a href="#skills" class="hover:text-gray-300">Skills</a></p>
-                                <p class="text-md text-white pl-2"> <a href="#experience" class="hover:text-gray-300">Experience</a></p>
-                                <p class="text-md text-white pl-2"> <a href="#portfolio" class="hover:text-gray-300">Portfolio</a></p>
-                                <p class="text-md text-white pl-2"> <a href="#contact" class="hover:text-gray-300">Contact</a></p>
+                                <p class=" text-white pl-2"> <a href="#home" class="hover:text-gray-300">Home</a></p>
+                                <p class=" text-white pl-2"> <a href="#about" class="hover:text-gray-300">About</a></p>
+                                <p class=" text-white pl-2"> <a href="#skills" class="hover:text-gray-300">Skills</a></p>
+                                <p class=" text-white pl-2"> <a href="#experience" class="hover:text-gray-300">Experience</a></p>
+                                <p class=" text-white pl-2"> <a href="#portfolio" class="hover:text-gray-300">Portfolio</a></p>
+                                <p class=" text-white pl-2"> <a href="#contact" class="hover:text-gray-300">Contact</a></p>
                             </div>
                         </div>
                         </div>
