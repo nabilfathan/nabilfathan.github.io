@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="script.js" />
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7xj1z5l5c5e5e5e5e5e5e5e5e5e5e5e5e" crossorigin="anonymous" />
+    <style src="style.css"></style>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <style type="text/tailwindcss">
       .grid-item {
             @apply h-40 border-2 border-gray-100 flex justify-center items-center rounded-md;
@@ -14,6 +20,49 @@
         }
         .fade-in {
             animation: fadeIn 2s ease-in-out;
+        }
+          /* CSS untuk animasi fade */
+        .fade {
+            opacity: 0; /* Mulai dengan opacity 0 untuk animasi */
+            transition: opacity 1s ease; /* Transisi untuk efek fade */
+        }
+
+        .fade.visible {
+            opacity: 1; /* Menampilkan elemen dengan opacity 1 */
+        }
+        /* CSS untuk animasi pop */
+        .pop {
+            transform: scale(0); /* Mulai dengan skala 0 untuk animasi */
+            opacity: 0; /* Mulai dengan opacity 0 */
+            transition: transform 0.5s ease, opacity 0.5s ease; /* Transisi untuk efek pop */
+        }
+
+        .pop.visible {
+            transform: scale(1); /* Menampilkan elemen dengan skala 1 */
+            opacity: 1; /* Menampilkan elemen dengan opacity 1 */
+        }
+        .slide {
+            transform: translateX(-100%); /* Mulai dari luar layar */
+            opacity: 0; /* Mulai dengan opacity 0 */
+            transition: transform 0.5s ease, opacity 0.5s ease; /* Transisi untuk efek slide */
+        }
+
+        .slide.visible {
+            transform: translateX(0); /* Menampilkan elemen di posisi normal */
+            opacity: 1; /* Menampilkan elemen dengan opacity 1 */
+        }
+        .typing-animation {
+        font-size: 2rem;
+        border-right: 2px solid black; /* Efek kursor */
+        white-space: nowrap;
+        overflow: hidden;
+        width: 0; /* Mulai dari lebar 0 */
+        transition: width 0.5s ease; /* Transisi halus */
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: black; }
         }
     </style>
     <title>My Portofolio</title>
@@ -66,16 +115,16 @@
                 <div class="flex flex-col lg:flex-row sm:mx-8">
                     <div class="lg:w-1/3 mb-8 lg:mb-0">
                         <img src="asset/Profil.jpg" alt="Profile Picture"
-                        class="rounded-full  lg:scale-150 w-64 h-64 lg:mt-36 items-center mx-auto lg:mx-10 hover:scale-110 transition-transform duration-300">
+                        class="fade pop rounded-full lg:scale-150 w-64 h-64 lg:mt-36 items-center mx-auto lg:mx-10 hover:scale-110 transition-transform duration-300">
                     </div>
                     <div class="lg:w-2/3 lg:pl-10 lg:pt-5 text-white">
-                        <p class="text-base lg:text-xl font-normal text-justify mb-4">Kenalkan saya <b>Muhammad Nabil Alfathan</b> yang
+                        <p class="text-base lg:text-xl font-normal text-justify mb-4 fade ">Kenalkan saya <b>Muhammad Nabil Alfathan</b> yang
                             merupakan
                             mahasiswa
                             Universitas Riau Fakultas Teknik jurusan teknik Informatika. Saya memiliki ketertarikan dan minat
                             yang tinggi kepada kemajuan teknologi. Sangat senang jika saya dapat menjadi orang yang terkemuka di
                             bidang teknologi.</p>
-                        <p class="text-base lg:text-xl font-normal text-justify mb-4">
+                        <p class="text-base lg:text-xl font-normal text-justify mb-4 fade">
                             Alasan saya memilih jurusan Teknik Informatika adalah karena saya memiliki minat yang besar dalam dunia teknologi
                             dan
                             ingin terlibat langsung dalam perkembangannya yang
@@ -87,7 +136,7 @@
                             berbagai permasalahan di berbagai bidang,
                             dan saya ingin menjadi bagian dari perubahan tersebut.
                         </p>
-                        <p class="text-base lg:text-xl font-normal text-justify mb-4">
+                        <p class="text-base lg:text-xl font-normal text-justify mb-4 fade">
                             Saat ini, saya memiliki sedikit kemampuan dalam pemrograman, desain, serta pengembangan aplikasi. Saya terus belajar
                             dan
                             mengasah keterampilan saya
@@ -97,7 +146,7 @@
                             kreativitas saya dalam bentuk visual.
                             Beberapa hasil karya saya dapat dilihat di portofolio saya sebagai bukti dari keterampilan yang saya miliki.
                         </p>
-                        <p class="text-base lg:text-xl font-normal text-justify mb-4">
+                        <p class="text-base lg:text-xl font-normal text-justify mb-4 fade">
                             Saya percaya bahwa kombinasi antara pengetahuan teknis dan kreativitas adalah kunci untuk menciptakan solusi yang
                             inovatif
                             dan efektif. Oleh karena itu, saya selalu berusaha untuk mengembangkan diri dalam kedua aspek tersebut.
@@ -119,42 +168,42 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 scale-90 lg:scale-100">
                     <div
-                        class="bg-neutral-950 rounded-lg p-4  hover:scale-105 transition-transform-colors duration-300 hover:bg-neutral-900">
+                        class="pop bg-neutral-950 rounded-lg p-4  hover:scale-105 transition-transform-colors duration-300 hover:bg-neutral-900">
                         <img src="asset/Dsgn.jpg" alt="Skills" class="rounded-lg w-full h-64 mb-2 object-cover">
                         <h3 class="text-2xl font-semibold text-white">Design Graphic (Intermediate)</h3>
                         <p class="text-gray-400 mt-2">Kemampuan dalam desain grafis menggunakan software seperti Adobe
                             Photoshop dan CorelDRAW.</p>
                     </div>
                     <div
-                        class="bg-neutral-950 rounded-lg p-4  hover:scale-105 transition-transform-colors duration-300 hover:bg-neutral-900">
+                        class="pop slide delay-150 transition-duration-300  bg-neutral-950 rounded-lg p-4  hover:scale-105 transition-transform-colors duration-300 hover:bg-neutral-900">
                         <img src="asset/1.png" alt="Skills" class="rounded-lg w-full h-64 mb-2 object-cover">
                         <h3 class="text-2xl font-semibold text-white">Videography</h3>
                         <p class="text-gray-400 mt-2">Kemampuan dalam pengambilan gambar dan editing video menggunakan
                             software seperti Adobe Premiere Pro.</p>
                     </div>
                     <div
-                        class="bg-neutral-950 rounded-lg p-4  hover:scale-105 transition-transform-colors duration-300 hover:bg-neutral-900">
+                        class="pop delay-300 bg-neutral-950 rounded-lg p-4  hover:scale-105 transition-transform-colors duration-300 hover:bg-neutral-900">
                         <img src="asset/DSC03116.JPG" alt="Skills" class="rounded-lg w-full h-64 mb-2 object-cover">
                         <h3 class="text-2xl font-semibold text-white">Photography</h3>
                         <p class="text-gray-400 mt-2">Kemampuan dalam pengambilan gambar dan editing foto menggunakan
                             software seperti Adobe Lightroom.</p>
                     </div>
                     <div
-                        class="bg-neutral-950 rounded-lg p-4  hover:scale-105 transition-transform-colors duration-300 hover:bg-neutral-900">
+                        class="pop slide bg-neutral-950 rounded-lg p-4  hover:scale-105 transition-transform-colors duration-300 hover:bg-neutral-900">
                         <img src="asset/FishEye.jpg" alt="Skills" class="rounded-lg w-full h-64 mb-2 object-cover">
                         <h3 class="text-2xl font-semibold text-white">Teamwork</h3>
                         <p class="text-gray-400 mt-2">Kemampuan dalam bekerja sama dalam tim untuk mencapai tujuan
                             bersama.</p>
                     </div>
                     <div
-                        class="bg-neutral-950 rounded-lg p-4  hover:scale-105 transition-transform-colors duration-300 hover:bg-neutral-900 ">
+                        class="pop bg-neutral-950 rounded-lg p-4  hover:scale-105 transition-transform-colors duration-300 hover:bg-neutral-900 ">
                         <img src="asset/edit.jpg" alt="Skills" class="rounded-lg w-full h-64 mb-2 object-cover">
                         <h3 class="text-2xl font-semibold text-white">Video Editing</h3>
                         <p class="text-gray-400 mt-2">Kemampuan dalam mengedit video menggunakan software seperti Adobe
                             After Effects.</p>
                     </div>
                     <div
-                        class="bg-neutral-950 rounded-lg p-4  hover:scale-105 transition-transform-colors duration-300 hover:bg-neutral-900 ">
+                        class="pop slide bg-neutral-950 rounded-lg p-4  hover:scale-105 transition-transform-colors duration-300 hover:bg-neutral-900 ">
                         <img src="asset/web.jpg" alt="Skills" class="rounded-lg w-full h-64 mb-2 object-cover">
                         <h3 class="text-2xl font-semibold text-white">Web Development (Beginner)</h3>
                         <p class="text-gray-400 mt-2">Kemampuan dalam membangun website menggunakan HTML, CSS, dan JavaScript.
@@ -171,7 +220,8 @@
                     <p class="text-gray-300 mt-4">Pengalaman yang saya miliki</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:h-svh scale-90 lg:scale-100">
-                    <div class="bg-neutral-950 rounded-lg p-5  hover:scale-105 transition-transform duration-300 hover:bg-neutral-900">
+                    <div
+                        class="slide bg-neutral-950 rounded-lg p-5  hover:scale-105 transition-transform duration-300 hover:bg-neutral-900">
                         <img src="asset/lnyd.jpg" alt="Skills" class="w-full h-auto mx-auto mb-2 object-cover">
                         <h3 class="text-2xl font-semibold text-white">Minister of Communications Division</h3>
                         <p class="text-gray-400 mt-2">Menjadi penanngung jawab divisi Kominfo di pengurusan sekolah. Mendapat kepercayaan
@@ -179,7 +229,7 @@
                             media komunikasi dan informasi di sekolah, seperti design flyer, banner, dan pemberian informasi di mading
                         </p>
                     </div>
-                    <div class="bg-neutral-950 rounded-lg p-5  hover:scale-105 transition-transform duration-300 hover:bg-neutral-900">
+                    <div class="pop bg-neutral-950 rounded-lg p-5  hover:scale-105 transition-transform duration-300 hover:bg-neutral-900">
                         <img src="asset/tim.jpg" alt="Skills" class="w-full h-auto mx-auto mb-2">
                         <h3 class="text-2xl font-semibold text-white">Creative Team</h3>
                         <p class="text-gray-400 mt-2">Menjadi Tim kreatif acara tahunan sekolah yang merupakan acara besar yang
@@ -189,7 +239,8 @@
                             untuk menambah pengalaman di design graphic dan motion graphic sederhana
                         </p>
                     </div>
-                    <div class="bg-neutral-950 rounded-lg p-5  hover:scale-105 transition-transform duration-300 hover:bg-neutral-900">
+                    <div
+                        class="slide bg-neutral-950 rounded-lg p-5  hover:scale-105 transition-transform duration-300 hover:bg-neutral-900">
                         <img src="asset/FishEye.jpg" alt="Skills" class="w-full h-auto mx-auto mb-2">
                         <h3 class="text-2xl font-semibold text-white">Documentary Team</h3>
                         <p class="text-gray-400 mt-2">Menjadi Tim penanggung jawab Album dan video kenangan Angkatan. Mendapatkan kepercayaan oleh angkatan kepada kami sebagai tim
@@ -211,40 +262,40 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 scale-90 lg:scale-100">
                     <div
-                        class="bg-neutral-950 rounded-lg p-4 hover:shadow-lg hover:scale-105 transition-transform-colors duration-300 hover:bg-neutral-900">
+                        class="pop fade bg-neutral-950 rounded-lg p-4 hover:shadow-lg hover:scale-105 transition-transform-colors duration-300 hover:bg-neutral-900">
                         <img src="asset/Portofolio Submission_002.png" alt="Project 1" class="rounded-lg w-full h-64 object-cover">
                         <h3 class="text-2xl font-semibold mt-4 text-white">Creative Team</h3>
                         <p class="text-gray-400 mt-2">Dipercaya menjadi penanggung jawab design di acara tahunan sekolah, yang meluputi dari
                             Proposal, Invitation, Banner, dan Motion Graphic sederhana </p>
                     </div>
                     <div
-                        class="bg-neutral-950 rounded-lg p-4 hover:shadow-lg hover:scale-105 transition-transform-colors duration-300 hover:bg-neutral-900">
+                        class="pop slide bg-neutral-950 rounded-lg p-4 hover:shadow-lg hover:scale-105 transition-transform-colors duration-300 hover:bg-neutral-900">
                         <video src="asset/Ngopi.mp4" alt="Project 2" class="rounded-lg w-full h-64 object-cover" controls></video>
                         <h3 class="text-2xl font-semibold mt-4 text-white">Videography</h3>
                         <p class="text-gray-400 mt-2">Sebuah video sederhana yang berjudul Ngopi. Sebuah video kegiatan saya di pagi hari, Videography telah menjadi salah satu dari hobi saya</p>
                     </div>
                     <div
-                        class="bg-neutral-950 rounded-lg p-4 hover:shadow-lg hover:scale-105 transition-transform-colors duration-300 hover:bg-neutral-900">
+                        class="pop fade bg-neutral-950 rounded-lg p-4 hover:shadow-lg hover:scale-105 transition-transform-colors duration-300 hover:bg-neutral-900">
                         <img src="asset/Portofolio Submission_003.png" alt="Project 4" class="rounded-lg w-full h-64 object-cover">
                         <h3 class="text-2xl font-semibold mt-4 text-white">Part of the Alkena Manufacturing Team</h3>
                         <p class="text-gray-400 mt-2">Menjadi Tim penanggung jawab Album Kenangan Angkatan. Dipercaya Angkatan untuk menjadi
                             penyusun Album Kenangan tanpa memakai jasa eksternal. </p>
                     </div>
                     <div
-                        class="bg-neutral-950 rounded-lg p-4 hover:shadow-lg hover:scale-105 transition-transform-colors duration-300 hover:bg-neutral-900">
+                        class="pop slide bg-neutral-950 rounded-lg p-4 hover:shadow-lg hover:scale-105 transition-transform-colors duration-300 hover:bg-neutral-900">
                         <video src="asset/SuperPower.mp4" alt="Project 5" class="rounded-lg w-full h-64 object-cover"
                         controls></video>
                         <h3 class="text-2xl font-semibold mt-4 text-white">Video Editor</h3>
                         <p class="text-gray-400 mt-2">Sebuah video pendek yang memanfaatkan rotobrush di After Effect, Memiliki sedikit skill menggunakan After Effect</p>
                     </div>
                     <div
-                            class="bg-neutral-950 rounded-lg p-4 hover:shadow-lg hover:scale-105 transition-transform-colors duration-300 hover:bg-neutral-900">
+                            class="pop fade bg-neutral-950 rounded-lg p-4 hover:shadow-lg hover:scale-105 transition-transform-colors duration-300 hover:bg-neutral-900">
                             <img src="asset/dsgn lnyrd.png" alt="Project 3" class="rounded-lg w-full h-64 object-cover">
                             <h3 class="text-2xl font-semibold mt-4 text-white">ID Card</h3>
                             <p class="text-gray-400 mt-2">Berkesempatan menjadi penanggung jawab pembuatan ID Card ketika sebagai CO Kominfo di tahun pengurusan</p>
                     </div>
                     <div
-                        class="bg-neutral-950 rounded-lg p-4 hover:shadow-lg hover:scale-105 transition-transform-colors duration-300 hover:bg-neutral-900">
+                        class="pop slide bg-neutral-950 rounded-lg p-4 hover:shadow-lg hover:scale-105 transition-transform-colors duration-300 hover:bg-neutral-900">
                         <img src="asset/Web Porto.png" alt="Project 6" class="rounded-lg w-full h-64 object-cover">
                         <h3 class="text-2xl font-semibold mt-4 text-white">Web Development</h3>
                         <p class="text-gray-400 mt-2">Pembuatan web Portofolio Pribadi sekaligus penyelesaian tugas dan dalam tahap pembelajaran pembuatan web</p>
