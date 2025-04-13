@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="script.js" />
     <script src="script.js"></script>
@@ -69,17 +70,22 @@
 <body class="bg-gray-100">
 
     <div class="bg-black ">
-        <div class="container mx-auto py-3 sm:flex justify-between items-center sm: text-center ">
-            <img src="asset/bg.jpg" class="overlay absolute top-0 left-0 w-full h-full object-cover opacity-30" alt="Background Image overflow-hidden">
-            <h1 class="text-2xl font-bold justify-center text-white relative">Nabilfathan's</h1>
-            <ul class="flex text-xs lg:text-base  text-black lg:text-white lg:space-x-10 space-x-4  items-center sm: justify-center relative ">
-                <li><a href="#home" class="hover:text-gray-300">Home</a></li>
-                <li><a href="#about" class="hover:text-gray-300">About</a></li>
-                <li><a href="#skills" class="hover:text-gray-300">Skills</a></li>
-                <li><a href="#experience" class="hover:text-gray-300">Experience</a></li>
-                <li><a href="#portfolio" class="hover:text-gray-300">Portofolio</a></li>
-                <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
-            </ul>
+        <div class="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-80 backdrop-blur-md">
+            <div class="container mx-auto py-3 sm:flex justify-between items-center sm: text-center ">
+                <img src="asset/bg.jpg" class="overlay absolute top-0 left-0 w-full h-full object-cover opacity-30"
+                    alt="Background Image overflow-hidden">
+                <h1 class="text-2xl font-bold justify-center text-white relative">Nabilfathan's</h1>
+                <ul
+                    class="flex text-xs lg:text-base  text-black lg:text-white lg:space-x-10 space-x-4  items-center sm: justify-center relative ">
+                    <li><a href="#home" class="hover:text-gray-300">Home</a></li>
+                    <li><a href="#about" class="hover:text-gray-300">About</a></li>
+                    <li><a href="blog.html" class="hover:text-gray-300">Blog</a></li>
+                    <li><a href="#skills" class="hover:text-gray-300">Skills</a></li>
+                    <li><a href="#experience" class="hover:text-gray-300">Experience</a></li>
+                    <li><a href="#portfolio" class="hover:text-gray-300">Portofolio</a></li>
+                    <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+                    </ul>
+                    </div>
         </div>
         <audio stop loop>
         <source src="asset/Pluto Melody.mp3" type="audio/mpeg" />
@@ -129,14 +135,15 @@
                         <img src="asset/Profil.jpg" alt="Profile Picture"
                         class="pop rounded-full lg:scale-150 w-64 h-64 lg:h-96 lg:w-96 lg:mt-36 items-center mx-auto lg:mx-10 hover:scale-110 transition-transform-border duration-300">
                     </div>
-                    <div class="lg:w-2/3 lg:pl-10 lg:pt-5 text-white px-5">
-                        <p class="text-base lg:text-xl font-normal text-justify mb-4 fade  ">Kenalkan saya <b>Muhammad Nabil Alfathan</b> yang
+                    <div class="lg:w-2/3 lg:pl-10 lg:pt-5 text-white px-5 my-auto items-center lg:mt-20">
+                        <p class="text-base lg:text-lg font-normal text-justify mb-4 fade  ">Kenalkan saya <b>Muhammad Nabil Alfathan</b>
+                            yang
                             merupakan
                             mahasiswa
                             Universitas Riau Fakultas Teknik jurusan teknik Informatika. Saya memiliki ketertarikan dan minat
                             yang tinggi kepada kemajuan teknologi. Sangat senang jika saya dapat menjadi orang yang terkemuka di
                             bidang teknologi.</p>
-                        <p class="text-base lg:text-xl font-normal text-justify mb-4 fade">
+                        <p class="text-base lg:text-lg font-normal text-justify mb-4 fade">
                             Alasan saya memilih jurusan Teknik Informatika adalah karena saya memiliki minat yang besar dalam dunia teknologi
                             dan
                             ingin terlibat langsung dalam perkembangannya yang
@@ -148,7 +155,7 @@
                             berbagai permasalahan di berbagai bidang,
                             dan saya ingin menjadi bagian dari perubahan tersebut.
                         </p>
-                        <p class="text-base lg:text-xl font-normal text-justify mb-4 fade">
+                        <p class="text-base lg:text-lg font-normal text-justify mb-4 fade">
                             Saat ini, saya memiliki sedikit kemampuan dalam pemrograman, desain. Saya terus belajar
                             dan
                             mengasah keterampilan saya
@@ -158,19 +165,34 @@
                             kreativitas saya dalam bentuk visual.
                             Beberapa hasil karya saya dapat dilihat di portofolio saya sebagai bukti dari keterampilan yang saya miliki.
                         </p>
-                        <p class="text-base lg:text-xl font-normal text-justify mb-4 fade">
-                            Saya percaya bahwa kombinasi antara pengetahuan teknis dan kreativitas adalah kunci untuk menciptakan solusi yang
-                            inovatif
-                            dan efektif. Oleh karena itu, saya selalu berusaha untuk mengembangkan diri dalam kedua aspek tersebut.
-                            Dengan kombinasi minat dan keterampilan ini, saya berharap dapat mengembangkan diri lebih jauh dalam dunia teknologi
-                            dan industri kreatif, serta mampu memberikan dampak positif melalui inovasi dan solusi berbasis teknologi.
-                        </p>
+                    
                         
                     </div>
                     </div>
                         </div>
                     </div>
-                        </section>
+        </section>
+        <section id="blog" class="max-w-4xl mx-auto px-4 py-10">
+            <h3 class="text-2xl font-semibold mb-6">Postingan Terbaru</h3>
+            <div class="space-y-6">
+        
+                <div class="bg-white shadow p-5 rounded-lg hover:scale-105 transition-transform duration-300">
+                    <h4 class="text-xl font-bold">Laporan Sistem Multimedia</h4>
+                    <p class="text-sm text-gray-500 mb-2">Diposting pada 15 April 2025</p>
+                    <p>Saya mulai belajar HTML dan ternyata sangat seru! HTML adalah fondasi dari web. Artikel ini membahas
+                        elemen dasar seperti heading, paragraph, link, dan image.</p>
+                    <li><a href="Blog.html" class="text-blue-400 font-semibold hover:blue-500">Lihat File -></a></li>
+                </div>
+        
+                <div class="bg-white shadow p-5 rounded-lg hover:scale-105 transition-transform duration-300">
+                    <h4 class="text-xl font-bold">Kenapa Saya Pilih Teknik Informatika</h4>
+                    <p class="text-sm text-gray-500 mb-2">Diposting pada 5 April 2025</p>
+                    <p>Saya ingin ikut andil dalam perkembangan teknologi. Melalui blog ini saya ingin membagikan alasan dan
+                        semangat saya memilih jurusan ini.</p>
+                </div>
+        
+            </div>
+        </section>
                         
         <section id="skills" class="bg-neutral-950 py-10 min-h-screen overflow-hidden">
             <div class="container mx-auto px-4 pb-20">
@@ -313,6 +335,9 @@
                         <p class="text-gray-400 mt-2">Pembuatan web Portofolio Pribadi sekaligus penyelesaian tugas dan dalam tahap pembelajaran pembuatan web</p>
                     </div>
             </div>
+        </div>
+        </section>  
+         
 
     </div>
     </body>
@@ -346,14 +371,25 @@
                                 </ul>
                             </div>
                             <div class="bg-neutral-950 rounded-xl p-2 ">
-                                <h2 class="text-2xl font-semibold text-white pl-2 pb-2">Back To</h2>
-                                <p class=" text-white pl-2"> <a href="#home" class="hover:text-gray-300">Home</a></p>
-                                <p class=" text-white pl-2"> <a href="#about" class="hover:text-gray-300">About</a></p>
-                                <p class=" text-white pl-2"> <a href="#skills" class="hover:text-gray-300">Skills</a></p>
-                                <p class=" text-white pl-2"> <a href="#experience" class="hover:text-gray-300">Experience</a></p>
-                                <p class=" text-white pl-2"> <a href="#portfolio" class="hover:text-gray-300">Portfolio</a></p>
-                                <p class=" text-white pl-2"> <a href="#contact" class="hover:text-gray-300">Contact</a></p>
-                            </div>
+                            <h2 class="text-2xl font-bold mb-4 text-white ">Kirim Saran</h2>
+                            <form action="mailto:nabil@example.com" method="POST" enctype="text/plain">
+                              <div class="mb-4">
+                                <label class="block mb-2 font-semibold text-white">Nama:</label>
+                                <input type="text" name="Nama" class="w-full px-4 py-2 border rounded" placeholder="Nama Anda" required>
+                              </div>
+                              <div class="mb-4">
+                                <label class="block mb-2 font-semibold text-white">Email Anda:</label>
+                                <input type="email" name="Email" class="w-full px-4 py-2 border rounded" placeholder="email@example.com" required>
+                              </div>
+                              <div class="mb-4">
+                                <label class="block mb-2 font-semibold text-white">Pesan / Saran:</label>
+                                <textarea name="Pesan" rows="5" class="w-full px-4 py-2 border rounded" placeholder="Tulis pesan di sini..." required></textarea>
+                              </div>
+                              <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">
+                                Kirim via Email
+                              </button>
+                            </form>
+                            
                         </div>
                         </div>
                         </div>
