@@ -104,3 +104,17 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     
     window.addEventListener('scroll', handleScroll);
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    let menuVisible = false;
+
+    menuToggle.addEventListener('click', () => {
+        // Toggle the visibility of the mobile menu
+        if (menuVisible) {
+            mobileMenu.classList.add('hidden');  // Hide the mobile menu
+        } else {
+            mobileMenu.classList.remove('hidden');  // Show the mobile menu
+        }
+        menuVisible = !menuVisible;
+    });
