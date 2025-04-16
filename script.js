@@ -118,3 +118,67 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         menuVisible = !menuVisible;
     });
+
+    // MP3 Player
+const audioMP3 = document.getElementById('audioMP3');
+const playPauseMP3 = document.getElementById('playPauseMP3');
+const playPauseIconMP3 = document.getElementById('playPauseIconMP3');
+const progressMP3 = document.getElementById('audioProgressMP3');
+
+if (audioMP3 && playPauseMP3) {
+  playPauseMP3.addEventListener('click', function () {
+    if (audioMP3.paused) {
+      audioMP3.play();
+      playPauseIconMP3.textContent = '⏸';
+    } else {
+      audioMP3.pause();
+      playPauseIconMP3.textContent = '▶';
+    }
+  });
+
+  audioMP3.addEventListener('timeupdate', function () {
+    const progress = (audioMP3.currentTime / audioMP3.duration) * 100;
+    progressMP3.value = progress;
+  });
+
+  progressMP3.addEventListener('input', function () {
+    const seekTime = (progressMP3.value / 100) * audioMP3.duration;
+    audioMP3.currentTime = seekTime;
+  });
+}
+
+function setupAudioPlayer(audioId, playButtonId, progressId, iconId) {
+    const audio = document.getElementById(audioId);
+    const playButton = document.getElementById(playButtonId);
+    const progress = document.getElementById(progressId);
+    const playIcon = document.getElementById(iconId);
+
+    playButton.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        playIcon.textContent = '❚❚'; // Ganti dengan ikon pause
+      } else {
+        audio.pause();
+        playIcon.textContent = '▶'; // Ganti dengan ikon play
+      }
+    });
+
+    audio.addEventListener('timeupdate', () => {
+      const progressValue = (audio.currentTime / audio.duration) * 100;
+      progress.value = progressValue;
+    });
+
+    progress.addEventListener('input', () => {
+      const seekTime = (progress.value / 100) * audio.duration;
+      audio.currentTime = seekTime;
+    });
+  }
+
+  // Setup untuk setiap format audio
+  setupAudioPlayer('audioMP3', 'playPauseMP3', 'audioProgressMP3', 'playPauseIconMP3');
+  setupAudioPlayer('audioWAV', 'playPauseWAV', 'audioProgressWAV', 'playPauseIconWAV');
+  setupAudioPlayer('audioAAC', 'playPauseAAC', 'audioProgressAAC', 'playPauseIconAAC');
+  // Tambahkan setup lainnya sesuai format audio yang Anda punya
+
+    
+    

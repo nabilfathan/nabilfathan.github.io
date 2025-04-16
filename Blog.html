@@ -5,7 +5,171 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Blog - Nabil</title>
   <link src="index.html" rel="stylesheet" href="index.html">
+  <link rel="stylesheet" href="script.js" />
+  <script src="script.js" defer></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    @keyframes fade {
+  
+      0%,
+      100% {
+        opacity: 0.3;
+      }
+  
+      50% {
+        opacity: 1;
+      }
+    }
+  
+    @keyframes pop {
+  
+      0%,
+      100% {
+        transform: scale(1);
+      }
+  
+      50% {
+        transform: scale(1.2);
+      }
+    }
+  
+    @keyframes bounce {
+  
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+  
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+  
+    @keyframes slide-up {
+  
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+  
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+  
+    @keyframes slide-down {
+  
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+  
+      50% {
+        transform: translateY(15px);
+      }
+    }
+  
+    @keyframes slide-left {
+  
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+  
+      50% {
+        transform: translateX(-15px);
+      }
+    }
+  
+    @keyframes slide-right {
+  
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+  
+      50% {
+        transform: translateX(15px);
+      }
+    }
+  
+    @keyframes zoom {
+  
+      0%,
+      100% {
+        transform: scale(1);
+      }
+  
+      50% {
+        transform: scale(1.4);
+      }
+    }
+  
+    @keyframes flip {
+      0% {
+        transform: rotateY(0);
+      }
+  
+      50% {
+        transform: rotateY(180deg);
+      }
+  
+      100% {
+        transform: rotateY(360deg);
+      }
+    }
+  
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+  
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  
+    /* Animation Classes */
+    .animate-fade {
+      animation: fade 2s infinite ease-in-out;
+    }
+  
+    .animate-pop {
+      animation: pop 1.5s infinite ease-in-out;
+    }
+  
+    .animate-bounce {
+      animation: bounce 1.2s infinite ease-in-out;
+    }
+  
+    .animate-slide-up {
+      animation: slide-up 1.5s infinite ease-in-out;
+    }
+  
+    .animate-slide-down {
+      animation: slide-down 1.5s infinite ease-in-out;
+    }
+  
+    .animate-slide-left {
+      animation: slide-left 1.5s infinite ease-in-out;
+    }
+  
+    .animate-slide-right {
+      animation: slide-right 1.5s infinite ease-in-out;
+    }
+  
+    .animate-zoom {
+      animation: zoom 2s infinite ease-in-out;
+    }
+  
+    .animate-flip {
+      animation: flip 2s infinite linear;
+    }
+  
+    .animate-rotate {
+      animation: rotate 3s infinite linear;
+    }
+  </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
 
@@ -51,76 +215,606 @@
 
     
   </section>
-  
-  <section id="popular-media" class="px-6 py-12 font-sans bg-black">
-    <h2 class="text-3xl font-bold mb-10 text-center text-white">📚 Informasi Media Populer</h2>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<section class="px-6 py-16 bg-gray-950 text-white font-sans">
+  <div class="container mx-auto p-8">
+    <h1 class="text-4xl font-bold text-center mb-6">Font Showcase</h1>
+    <p class="text-center mb-12 text-gray-300">Explore our collection of beautiful fonts!</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+
+      <!-- Satu contoh item -->
+      <div
+        class="bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-700 transform hover:scale-110 transition-transform duration-300 cursor-pointer">
+        <h2 class="text-xl font-semibold mb-3 text-white/90">Arial</h2>
+        <p style="font-family: Arial, sans-serif;" class="text-lg italic text-white/80 tracking-wide">
+          The quick brown fox jumps over the lazy dog.
+        </p>
+        <p class="mt-4 text-sm text-gray-400">Font sans-serif yang bersih dan sangat umum digunakan.</p>
+      </div>
+
+      <!-- Ulangi untuk font lainnya... -->
+      <div
+        class="bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-700 transform hover:scale-110 transition-transform duration-300 cursor-pointer">
+        <h2 class="text-xl font-semibold mb-3 text-white/90">Times New Roman</h2>
+        <p style="font-family: 'Times New Roman', serif;" class="text-lg italic text-white/80 tracking-wide">
+          The quick brown fox jumps over the lazy dog.
+        </p>
+        <p class="mt-4 text-sm text-gray-400">Font serif klasik yang populer di dokumen resmi dan akademik.</p>
+      </div>
       
-      <!-- Font Populer -->
-      <div class="bg-gray-100 rounded-2xl shadow-md p-6">
-        <h3 class="text-xl font-semibold mb-4">🔠 Font Populer</h3>
-        <ul class="list-disc list-inside space-y-1">
-          <li><strong>Times New Roman</strong>: Font serif klasik untuk dokumen resmi dan akademik.</li>
-          <li><strong>Arial</strong>: Font sans-serif sederhana dan bersih.</li>
-          <li><strong>Helvetica</strong>: Populer di desain grafis dan branding.</li>
-          <li><strong>Calibri</strong>: Font default Microsoft Office, sangat terbaca.</li>
-          <li><strong>Roboto</strong>: Font sans-serif modern yang digunakan di Android.</li>
-        </ul>
+      <div
+        class="bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-700 transition-transform duration-300 transform hover:scale-110 cursor-pointer">
+        <h2 class="text-xl font-semibold mb-3 text-white/90">Calibri</h2>
+        <p style="font-family: Calibri, sans-serif;" class="text-lg italic text-white/80 tracking-wide">
+          The quick brown fox jumps over the lazy dog.
+        </p>
+        <p class="mt-4 text-sm text-gray-400">Font default Microsoft Office, modern dan profesional.</p>
       </div>
-  
-      <!-- Format Gambar -->
-      <div class="bg-gray-100 rounded-2xl shadow-md p-6">
-        <h3 class="text-xl font-semibold mb-4">🖼️ Format Gambar Populer</h3>
-        <ul class="list-disc list-inside space-y-1">
-          <li><strong>JPEG (.jpg/.jpeg)</strong>: Format lossy untuk foto, ukuran kecil.</li>
-          <li><strong>PNG (.png)</strong>: Mendukung transparansi, cocok untuk ikon.</li>
-          <li><strong>GIF (.gif)</strong>: Animasi ringan, banyak digunakan di web.</li>
-          <li><strong>SVG (.svg)</strong>: Format vektor yang dapat diskalakan.</li>
-          <li><strong>WEBP (.webp)</strong>: Kompresi modern dengan kualitas bagus.</li>
-        </ul>
+      
+      <div
+        class="bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-700 transition-transform duration-300 transform hover:scale-110 cursor-pointer">
+        <h2 class="text-xl font-semibold mb-3 text-white/90">Sans-serif</h2>
+        <p style="font-family: sans-serif;" class="text-lg italic text-white/80 tracking-wide">
+          The quick brown fox jumps over the lazy dog.
+        </p>
+        <p class="mt-4 text-sm text-gray-400">Jenis huruf tanpa kait, tampilan minimalis dan modern.</p>
       </div>
-  
-      <!-- Format Video -->
-      <div class="bg-gray-100 rounded-2xl shadow-md p-6">
-        <h3 class="text-xl font-semibold mb-4">🎞️ Format Video Populer</h3>
-        <ul class="list-disc list-inside space-y-1">
-          <li><strong>MP4 (.mp4)</strong>: Format serbaguna dan paling umum digunakan.</li>
-          <li><strong>AVI (.avi)</strong>: Format lama dengan sedikit kompresi.</li>
-          <li><strong>MKV (.mkv)</strong>: Mendukung banyak codec dan subtitle.</li>
-          <li><strong>MOV (.mov)</strong>: Kualitas tinggi, cocok untuk profesional.</li>
-          <li><strong>WEBM (.webm)</strong>: Format ringan untuk video web.</li>
-        </ul>
+      
+      <div
+        class="bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-700 transition-transform duration-300 transform hover:scale-110 cursor-pointer">
+        <h2 class="text-xl font-semibold mb-3 text-white/90">Baskerville</h2>
+        <p style="font-family: Baskerville, serif;" class="text-lg italic text-white/80 tracking-wide">
+          The quick brown fox jumps over the lazy dog.
+        </p>
+        <p class="mt-4 text-sm text-gray-400">Font serif elegan dengan kontras tinggi, cocok untuk cetak.</p>
       </div>
-  
-      <!-- Format Audio -->
-      <div class="bg-gray-100 rounded-2xl shadow-md p-6">
-        <h3 class="text-xl font-semibold mb-4">🔊 Format Audio Populer</h3>
-        <ul class="list-disc list-inside space-y-1">
-          <li><strong>MP3 (.mp3)</strong>: Format audio umum dengan ukuran kecil.</li>
-          <li><strong>WAV (.wav)</strong>: Audio berkualitas tinggi, tanpa kompresi.</li>
-          <li><strong>FLAC (.flac)</strong>: Kompresi lossless dengan kualitas tetap.</li>
-          <li><strong>AAC (.aac)</strong>: Lebih efisien dari MP3, digunakan di iTunes.</li>
-          <li><strong>OGG (.ogg)</strong>: Format open-source untuk audio.</li>
-        </ul>
+      
+      <div
+        class="bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-700 transition-transform duration-300 transform hover:scale-110 cursor-pointer">
+        <h2 class="text-xl font-semibold mb-3 text-white/90">Roboto</h2>
+        <p style="font-family: Roboto, sans-serif;" class="text-lg italic text-white/80 tracking-wide">
+          The quick brown fox jumps over the lazy dog.
+        </p>
+        <p class="mt-4 text-sm text-gray-400">Font modern dan fleksibel, sering dipakai di Android.</p>
       </div>
-  
-      <!-- Jenis Animasi -->
-      <div class="bg-gray-100 rounded-2xl shadow-md p-6">
-        <h3 class="text-xl font-semibold mb-4">🎬 Jenis Animasi Populer</h3>
-        <ul class="list-disc list-inside space-y-1">
-          <li><strong>2D Animation</strong>: Animasi datar, seperti kartun klasik.</li>
-          <li><strong>3D Animation</strong>: Menggunakan objek 3D, umum di film dan game.</li>
-          <li><strong>Stop Motion</strong>: Animasi dari foto objek nyata secara berurutan.</li>
-          <li><strong>Motion Graphics</strong>: Animasi teks dan grafis untuk presentasi/video.</li>
-          <li><strong>Whiteboard Animation</strong>: Gaya gambar di papan putih, sering untuk edukasi.</li>
-        </ul>
+      
+      <div
+        class="bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-700 transition-transform duration-300 transform hover:scale-110 cursor-pointer">
+        <h2 class="text-xl font-semibold mb-3 text-white/90">Garamond</h2>
+        <p style="font-family: Garamond, serif;" class="text-lg italic text-white/80 tracking-wide">
+          The quick brown fox jumps over the lazy dog.
+        </p>
+        <p class="mt-4 text-sm text-gray-400">Font serif klasik, sangat bagus untuk teks panjang dan cetak.</p>
       </div>
+      
+      <div
+        class="bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-700 transition-transform duration-300 transform hover:scale-110 cursor-pointer">
+        <h2 class="text-xl font-semibold mb-3 text-white/90">Serif</h2>
+        <p style="font-family: serif;" class="text-lg italic text-white/80 tracking-wide">
+          The quick brown fox jumps over the lazy dog.
+        </p>
+        <p class="mt-4 text-sm text-gray-400">Font dengan "kaki" pada huruf, memberi kesan tradisional dan formal.</p>
+      </div>
+      
+      <div
+        class="bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-700 transition-transform duration-300 transform hover:scale-110 cursor-pointer">
+        <h2 class="text-xl font-semibold mb-3 text-white/90">Helvetica</h2>
+        <p style="font-family: Helvetica, sans-serif;" class="text-lg italic text-white/80 tracking-wide">
+          The quick brown fox jumps over the lazy dog.
+        </p>
+        <p class="mt-4 text-sm text-gray-400">Font sans-serif ikonik, sangat netral dan sering dipakai dalam desain
+          grafis.</p>
+      </div>
+      
+      <div
+        class="bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-700 transition-transform duration-300 transform hover:scale-110 cursor-pointer">
+        <h2 class="text-xl font-semibold mb-3 text-white/90">Georgia</h2>
+        <p style="font-family: Georgia, serif;" class="text-lg italic text-white/80 tracking-wide">
+          The quick brown fox jumps over the lazy dog.
+        </p>
+        <p class="mt-4 text-sm text-gray-400">Font serif yang didesain agar nyaman dibaca di layar.</p>
+      </div>
+      
+      </div>
+      </div>
+      </section>
+      
+      
+      
+      
+      <section class="px-6 py-16 bg-gray-950 text-white font-sans">
+        <div class="container mx-auto p-8">
+          <h1 class="text-4xl font-bold text-center mb-6">Image Format Showcase</h1>
+          <p class="text-center mb-12 text-gray-300">Explore popular image file formats!</p>
+      
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+      
+            <!-- Format: JPEG -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+              <img src="File/Gambar/cat_laughing.jpg" alt="JPEG example" class="rounded-md mb-4 mx-auto" />
+              <h2 class="text-xl font-semibold text-white/90">JPEG</h2>
+              <p class="mt-2 text-white/80 text-sm">Lossy compression, best for photos with small file size.</p>
+            </div>
+      
+            <!-- Format: PNG -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+              <img src="File/Gambar/cat_laughing.png" alt="PNG example" class="rounded-md mb-4 mx-auto" />
+              <h2 class="text-xl font-semibold text-white/90">PNG</h2>
+              <p class="mt-2 text-white/80 text-sm">Supports transparency, great for icons and UI.</p>
+            </div>
+      
+            <!-- Format: HEIF -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+              <img src="File/Gambar/cat_laughing.heic" alt="HEIF example" class="rounded-md mb-4 mx-auto" />
+              <h2 class="text-xl font-semibold text-white/90">HEIF</h2>
+              <p class="mt-2 text-white/80 text-sm">High-efficiency format used in modern phones (e.g. iPhone).</p>
+            </div>
+      
+            <!-- Format: BMP -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+              <img src="File/Gambar/cat_laughing.bmp" alt="BMP example" class="rounded-md mb-4 mx-auto" />
+              <h2 class="text-xl font-semibold text-white/90">BMP</h2>
+              <p class="mt-2 text-white/80 text-sm">Uncompressed format, large file size but high quality.</p>
+            </div>
+      
+            <!-- Format: RAW -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+              <img src="https://via.placeholder.com/150?text=RAW" alt="RAW example" class="rounded-md mb-4 mx-auto" />
+              <h2 class="text-xl font-semibold text-white/90">RAW</h2>
+              <p class="mt-2 text-white/80 text-sm">Unprocessed image from camera sensor for editing flexibility.</p>
+            </div>
+      
+            <!-- Format: GIF -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+              <img src="File/Gambar/cat_laughing.gif" alt="GIF example" class="rounded-md mb-4 mx-auto" />
+              <h2 class="text-xl font-semibold text-white/90">GIF</h2>
+              <p class="mt-2 text-white/80 text-sm">Simple animation format, widely used online.</p>
+            </div>
+      
+            <!-- Format: WEBP -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+              <img src="File/Gambar/cat_laughing.webp" alt="WEBP example" class="rounded-md mb-4 mx-auto" />
+              <h2 class="text-xl font-semibold text-white/90">WEBP</h2>
+              <p class="mt-2 text-white/80 text-sm">Modern web format with high compression and quality.</p>
+            </div>
+      
+            <!-- Format: TIFF -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+              <img src="File/Gambar/cat_laughing.tiff" alt="TIFF example" class="rounded-md mb-4 mx-auto" />
+              <h2 class="text-xl font-semibold text-white/90">TIFF</h2>
+              <p class="mt-2 text-white/80 text-sm">High-quality format used in publishing and archiving.</p>
+            </div>
+      
+            <!-- Format: ICO -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+              <img src="File/Gambar/cat_laughing.ico" alt="ICO example" class="rounded-md mb-4 mx-auto" />
+              <h2 class="text-xl font-semibold text-white/90">ICO</h2>
+              <p class="mt-2 text-white/80 text-sm">Used for favicons and icons on Windows systems.</p>
+            </div>
+      
+            <!-- Format: CUR -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+              <img src="File/Gambar/cat_laughing.cur" alt="CUR example" class="rounded-md mb-4 mx-auto" />
+              <h2 class="text-xl font-semibold text-white/90">CUR</h2>
+              <p class="mt-2 text-white/80 text-sm">Cursor image format used in Windows applications.</p>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      
+      <section class="px-6 py-16">
+        <div class="container mx-auto p-8 text-white">
+          <h1 class="text-4xl font-bold text-center mb-6">Audio Format Showcase</h1>
+          <p class="text-center mb-12">Eksplorasi 10 format audio populer dengan player standar!</p>
+      
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-6">
+            <!-- MP3 -->
+            <div class="bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-700">
+              <h2 class="text-xl font-semibold mb-3">MP3</h2>
+              <p class="text-sm text-gray-400 mb-3">Format audio lossy paling populer dengan dukungan luas dan ukuran file
+                kecil.</p>
+              <img src="File/sound-wave-ilustration-logo-vector-icon-template.jpg" alt="MP3"
+                class="rounded mb-4 w-full h-32 object-cover">
+              <audio controls class="w-full">
+                <source src="File/Audio/Muse - Hysteria.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+      <!-- WAV -->
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-700">
+        <h2 class="text-xl font-semibold mb-3">WAV</h2>
+        <p class="text-sm text-gray-400 mb-3">Format audio tanpa kompresi, kualitas tinggi, cocok untuk profesional.</p>
+        <img src="File/sound-wave-ilustration-logo-vector-icon-template.jpg" alt="WAV"
+          class="rounded mb-4 w-full h-32 object-cover">
+        <audio controls class="w-full">
+          <source src="File/Audio/Muse - Hysteria.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <!-- AAC -->
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-700">
+        <h2 class="text-xl font-semibold mb-3">AAC</h2>
+        <p class="text-sm text-gray-400 mb-3">Penerus MP3 dengan efisiensi kompresi lebih baik dan kualitas tinggi.</p>
+        <img src="File/sound-wave-ilustration-logo-vector-icon-template.jpg" alt="AAC"
+          class="rounded mb-4 w-full h-32 object-cover">
+        <audio controls class="w-full">
+          <source src="File/Audio/Muse - Hysteria .aac" type="audio/aac">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <!-- WMA -->
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-700">
+        <h2 class="text-xl font-semibold mb-3">WMA</h2>
+        <p class="text-sm text-gray-400 mb-3">Format buatan Microsoft dengan kualitas yang baik pada bitrate rendah.</p>
+        <img src="File/sound-wave-ilustration-logo-vector-icon-template.jpg" alt="WMA"
+          class="rounded mb-4 w-full h-32 object-cover">
+        <audio controls class="w-full">
+          <source src="File/Audio/Muse-Hysteria.wma" type="audio/wma">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      
+      <!-- AIFF -->
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-700">
+        <h2 class="text-xl font-semibold mb-3">AIFF</h2>
+        <p class="text-sm text-gray-400 mb-3">Format audio lossless buatan Apple, mirip WAV dengan metadata lebih
+          lengkap.
+        </p>
+        <img src="File/sound-wave-ilustration-logo-vector-icon-template.jpg" alt="AIFF"
+          class="rounded mb-4 w-full h-32 object-cover">
+        <audio controls class="w-full">
+          <source src="File/Audio/Muse-Hysteria-__.aiff" type="audio/aiff">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <!-- ALAC -->
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-700">
+        <h2 class="text-xl font-semibold mb-3">ALAC</h2>
+        <p class="text-sm text-gray-400 mb-3">Format lossless milik Apple, efisien untuk kualitas tinggi di ekosistem
+          iOS/macOS.</p>
+        <img src="File/sound-wave-ilustration-logo-vector-icon-template.jpg" alt="ALAC"
+          class="rounded mb-4 w-full h-32 object-cover">
+        <audio controls class="w-full">
+          <source src="audio/alac.m4a" type="audio/mp4">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <!-- DSD -->
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-700">
+        <h2 class="text-xl font-semibold mb-3">DSD</h2>
+        <p class="text-sm text-gray-400 mb-3">Format audio resolusi tinggi yang digunakan dalam SACD dan rekaman
+          profesional.
+        </p>
+        <img src="File/sound-wave-ilustration-logo-vector-icon-template.jpg" alt="DSD"
+          class="rounded mb-4 w-full h-32 object-cover">
+        <audio controls class="w-full">
+          <source src="audio/dsd.dsf" type="audio/dsf">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      
+      <!-- FLAC -->
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-700">
+        <h2 class="text-xl font-semibold mb-3">FLAC</h2>
+        <p class="text-sm text-gray-400 mb-3">Format lossless open-source dengan kompresi efisien dan kualitas tinggi.
+        </p>
+        <img src="File/sound-wave-ilustration-logo-vector-icon-template.jpg" alt="FLAC"
+          class="rounded mb-4 w-full h-32 object-cover">
+        <audio controls class="w-full">
+          <source src="File/Audio/Muse - Hysteria .flac" type="audio/flac">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      
+      <!-- OGG -->
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-700">
+        <h2 class="text-xl font-semibold mb-3">OGG</h2>
+        <p class="text-sm text-gray-400 mb-3">Format audio open-source dengan kompresi tinggi, sering digunakan di game
+          dan
+          aplikasi web.</p>
+        <img src="File/sound-wave-ilustration-logo-vector-icon-template.jpg" alt="OGG"
+          class="rounded mb-4 w-full h-32 object-cover">
+        <audio controls class="w-full">
+          <source src="File/Audio/Muse - Hysteria .ogg" type="audio/ogg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      
+      <!-- OPUS -->
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-700">
+        <h2 class="text-xl font-semibold mb-3">Opus</h2>
+        <p class="text-sm text-gray-400 mb-3">Format modern untuk streaming dan suara real-time dengan kualitas sangat
+          baik.
+        </p>
+        <img src="File/sound-wave-ilustration-logo-vector-icon-template.jpg" alt="Opus"
+          class="rounded mb-4 w-full h-32 object-cover">
+        <audio controls class="w-full">
+          <source src="File/Audio/Muse-Hysteria-_.opus" type="audio/opus">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      </div>
+      </div>
+      </section>
+      
+      
+      
+      <section class="px-6 py-16 bg-gray-950 text-white font-sans">
+        <div class="container mx-auto p-8">
+          <h1 class="text-4xl font-bold text-center mb-6">Video Format Showcase</h1>
+          <p class="text-center mb-12 text-gray-300">Discover common video file formats used across platforms.</p>
+      
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-6">
+      
+            <!-- Template: Ganti source src="#" jika ingin menampilkan video -->
+            <!-- MP4 -->
+            <div
+              class="bg-gray-800 p-5 rounded-2xl shadow-md border border-gray-700 transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+              <video class="w-full rounded-md mb-3" controls poster="https://via.placeholder.com/300x180?text=MP4+Preview">
+                <source src="File/video/Iklan Adem Sari - 15 detik (2022).mp4" class="overflow-hidden" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <h2 class="text-xl font-semibold text-white/90">MP4</h2>
+              <p class="mt-2 text-white/80 text-sm">Widely used format with great compression and compatibility.</p>
+            </div>
+      
+            <!-- AVI -->
+            <div
+              class="bg-gray-800 p-5 rounded-2xl shadow-md border border-gray-700 transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+              <video class="w-full rounded-md mb-3" controls poster="https://via.placeholder.com/300x180?text=AVI+Preview">
+                <source src="File/video/Iklan Adem Sari - 15 detik (2022).avi" type="video/avi" />
+              </video>
+              <h2 class="text-xl font-semibold text-white/90">AVI</h2>
+              <p class="mt-2 text-white/80 text-sm">Old Microsoft format, supports many codecs but larger size.</p>
+            </div>
+      
+            <!-- MKV -->
+            <div
+              class="bg-gray-800 p-5 rounded-2xl shadow-md border border-gray-700 transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+              <video class="w-full rounded-md mb-3" controls poster="https://via.placeholder.com/300x180?text=MKV+Preview">
+                <source src="File/video/Iklan Adem Sari - 15 detik (2022).mkv" type="video/x-matroska" />
+              </video>
+              <h2 class="text-xl font-semibold text-white/90">MKV</h2>
+              <p class="mt-2 text-white/80 text-sm">Flexible container format, great for HD videos and subtitles.</p>
+            </div>
+      
+            <!-- MOV -->
+            <div
+              class="bg-gray-800 p-5 rounded-2xl shadow-md border border-gray-700 transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+              <video class="w-full rounded-md mb-3" controls poster="https://via.placeholder.com/300x180?text=MOV+Preview">
+                <source src="File/video/Iklan Adem Sari - 15 detik (2022).mov" type="video/quicktime" />
+              </video>
+              <h2 class="text-xl font-semibold text-white/90">MOV</h2>
+              <p class="mt-2 text-white/80 text-sm">Apple QuickTime format, high quality and editing friendly.</p>
+            </div>
+      
+            <!-- WMF -->
+            <div
+              class="bg-gray-800 p-5 rounded-2xl shadow-md border border-gray-700 transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+              <video class="w-full rounded-md mb-3" controls poster="https://via.placeholder.com/300x180?text=WMF+Preview">
+                <source src="File/video/" type="video/x-ms-wmv" />
+              </video>
+              <h2 class="text-xl font-semibold text-white/90">WMF</h2>
+              <p class="mt-2 text-white/80 text-sm">Windows Media Format, used in legacy Microsoft systems.</p>
+            </div>
+            <!-- FLV -->
+            <div
+              class="bg-gray-800 p-5 rounded-2xl shadow-md border border-gray-700 transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+              <video class="w-full rounded-md mb-3" controls poster="https://via.placeholder.com/300x180?text=FLV+Preview">
+                <source src="#" type="video/x-flv" />
+              </video>
+              <h2 class="text-xl font-semibold text-white/90">FLV</h2>
+              <p class="mt-2 text-white/80 text-sm">Used for Flash video content, now deprecated but still seen.</p>
+            </div>
+            <!-- WEBM -->
+            <div
+              class="bg-gray-800 p-5 rounded-2xl shadow-md border border-gray-700 transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+              <video class="w-full rounded-md mb-3" controls poster="https://via.placeholder.com/300x180?text=WEBM+Preview">
+                <source src="File/video/Iklan Adem Sari - 15 detik (2022).webm" type="video/webm" />
+              </video>
+              <h2 class="text-xl font-semibold text-white/90">WEBM</h2>
+              <p class="mt-2 text-white/80 text-sm">Open-source format for web use, good quality and compression.</p>
+            </div>
   
+        <!-- AVCHD -->
+        <div
+          class="bg-gray-800 p-5 rounded-2xl shadow-md border border-gray-700 transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+          <video class="w-full rounded-md mb-3" controls poster="https://via.placeholder.com/300x180?text=AVCHD+Preview">
+            <source src="#" type="video/mp4" />
+          </video>
+          <h2 class="text-xl font-semibold text-white/90">AVCHD</h2>
+          <p class="mt-2 text-white/80 text-sm">High definition format for digital recording and playback.</p>
+        </div>
+  
+        <!-- 3GP -->
+        <div
+          class="bg-gray-800 p-5 rounded-2xl shadow-md border border-gray-700 transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+          <video class="w-full rounded-md mb-3" controls poster="https://via.placeholder.com/300x180?text=3GP+Preview">
+            <source src="File/video/Iklan Adem Sari - 15 detik (2022).3gp" type="video/3gpp" />
+          </video>
+          <h2 class="text-xl font-semibold text-white/90">3GP</h2>
+          <p class="mt-2 text-white/80 text-sm">Mobile video format optimized for 3G networks.</p>
+        </div>
+  
+        <!-- MPEG-2 -->
+        <div
+          class="bg-gray-800 p-5 rounded-2xl shadow-md border border-gray-700 transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+          <video class="w-full rounded-md mb-3" controls poster="https://via.placeholder.com/300x180?text=MPEG-2+Preview">
+            <source src="#" type="video/mpeg" />
+          </video>
+          <h2 class="text-xl font-semibold text-white/90">MPEG-2</h2>
+          <p class="mt-2 text-white/80 text-sm">Used in DVDs and broadcasting; older but still used.</p>
+        </div>
+  
+      </div>
     </div>
+    </section>
+    
+    <section class="px-6 py-16 bg-gray-950 text-white font-sans">
+      <div class="container mx-auto p-8">
+        <h1 class="text-4xl font-bold text-center mb-6">Jenis Animasi Film</h1>
+        <p class="text-center mb-12 text-gray-300">Eksplorasi berbagai teknik animasi yang digunakan dalam industri film modern dan klasik.</p>
+    
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-6">
+          <!-- Traditional (2D) Animation -->
+      <div class="bg-gray-800 p-5 rounded-2xl shadow-md border border-gray-700">
+        <iframe class="w-full rounded-md mb-3 aspect-video" src="https://www.youtube.com/embed/H6zogr_1NsM?si=XABFGe5UOnP5ylRq" allowfullscreen></iframe>
+        <h2 class="text-xl font-semibold text-white/90">Traditional Animation</h2>
+        <p class="mt-2 text-white/80 text-sm">Hand-drawn animation frames; classic Disney style.</p>
+      </div>
+
+      <!-- Digital 2D Animation -->
+      <div class="bg-gray-800 p-5 rounded-2xl shadow-md border border-gray-700">
+        <iframe class="w-full rounded-md mb-3 aspect-video" src="https://www.youtube.com/embed/nCKwUB8EVbc?si=kZD-xtn4RvB4aBGj" allowfullscreen></iframe>
+        <h2 class="text-xl font-semibold text-white/90">Digital 2D Animation</h2>
+        <p class="mt-2 text-white/80 text-sm">Computer-aided 2D animation; used in TV shows and web series.</p>
+      </div>
+
+      <!-- 3D (CGI) Animation -->
+      <div class="bg-gray-800 p-5 rounded-2xl shadow-md border border-gray-700">
+        <iframe class="w-full rounded-md mb-3 aspect-video" src="https://www.youtube.com/embed/h3pPwp0mkQE?si=A24slyIpRKuVvAjr" allowfullscreen></iframe>
+        <h2 class="text-xl font-semibold text-white/90">3D Animation</h2>
+        <p class="mt-2 text-white/80 text-sm">Computer-generated 3D models; used in Pixar movies.</p>
+      </div>
+
+      <!-- Stop Motion Animation -->
+      <div class="bg-gray-800 p-5 rounded-2xl shadow-md border border-gray-700">
+        <iframe class="w-full rounded-md mb-3 aspect-video" src="https://www.youtube.com/embed/MEglOulvgSY?si=pqunipjW_1TRCcyU" allowfullscreen></iframe>
+        <h2 class="text-xl font-semibold text-white/90">Stop Motion</h2>
+        <p class="mt-2 text-white/80 text-sm">Frame-by-frame photography of physical models.</p>
+      </div>
+
+      <!-- Motion Capture Animation -->
+      <div class="bg-gray-800 p-5 rounded-2xl shadow-md border border-gray-700">
+        <iframe class="w-full rounded-md mb-3 aspect-video" src="https://www.youtube.com/embed/9DCkjkCR3gQ?si=6ndJuPxEiJ73ffwL" allowfullscreen></iframe>
+        <h2 class="text-xl font-semibold text-white/90">Motion Capture</h2>
+        <p class="mt-2 text-white/80 text-sm">Capturing real actor movements for digital characters.</p>
+      </div>
+
+      <!-- Cutout Animation -->
+      <div class="bg-gray-800 p-5 rounded-2xl shadow-md border border-gray-700">
+        <iframe class="w-full rounded-md mb-3 aspect-video" src="https://www.youtube.com/embed/C4ZP3--XhyU?si=ganKC2tzLAr2lTNu" allowfullscreen></iframe>
+        <h2 class="text-xl font-semibold text-white/90">CGI</h2>
+        <p class="mt-2 text-white/80 text-sm">the creation of visual content, still or animated images, using computer software. </p>
+      </div>
+
+      <!-- Rotoscoping -->
+      <div class="bg-gray-800 p-5 rounded-2xl shadow-md border border-gray-700">
+        <iframe class="w-full rounded-md mb-3 aspect-video" src="https://www.youtube.com/embed/nNu9h80GaVg?si=2Dl-PiYl6hCzVmCN" allowfullscreen></iframe>
+        <h2 class="text-xl font-semibold text-white/90">Rotoscoping</h2>
+        <p class="mt-2 text-white/80 text-sm">Tracing over live footage to produce animation.</p>
+      </div>
+
+      <!-- Claymation -->
+      <div class="bg-gray-800 p-5 rounded-2xl shadow-md border border-gray-700">
+        <iframe class="w-full rounded-md mb-3 aspect-video" src="https://www.youtube.com/embed/kA2XrXeHSRg?si=pjvKFs_0wC4BO7iA" allowfullscreen></iframe>
+        <h2 class="text-xl font-semibold text-white/90">Claymation</h2>
+        <p class="mt-2 text-white/80 text-sm">A form of stop motion using clay models.</p>
+      </div>
+
+      <!-- Experimental Animation -->
+      <div class="bg-gray-800 p-5 rounded-2xl shadow-md border border-gray-700">
+        <iframe class="w-full rounded-md mb-3 aspect-video" src="https://www.youtube.com/embed/f00N2lZkI1Y?si=_U494dQouND2RW4f" allowfullscreen></iframe>
+        <h2 class="text-xl font-semibold text-white/90">Virtual Reality Animation</h2>
+        <p class="mt-2 text-white/80 text-sm">Nontraditional methods and abstract visuals.</p>
+      </div>
+
+      <!-- Hybrid Animation -->
+      <div class="bg-gray-800 p-5 rounded-2xl shadow-md border border-gray-700">
+        <iframe class="w-full rounded-md mb-3 aspect-video" src="https://www.youtube.com/embed/Jm-4nqjq47s?si=JkbtGfq_4UNbISRl" allowfullscreen></iframe>
+        <h2 class="text-xl font-semibold text-white/90">Hybrid Animation</h2>
+        <p class="mt-2 text-white/80 text-sm">Combining live-action and animated elements.</p>
+      </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="px-6 py-16 bg-black text-white">
+    
+      <body class="bg-gray-900 text-white p-8 font-sans">
+        <div class="container mx-auto">
+          <h1 class="text-4xl font-bold text-center mb-12">Preview 10 Animasi </h1>
+          <p class="text-center mb-12">Berikut adalah beberapa contoh animasi CSS yang dapat Anda gunakan!</p>
+    
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-4">
+        <div class="bg-gray-800 p-4 rounded-xl text-center border border-gray-700">
+          <p>Fade</p>
+          <div class="w-20 h-20 bg-white mx-auto mt-4 rounded-md animate-fade"></div>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-xl text-center border border-gray-700">
+          <p>Pop</p>
+          <div class="w-20 h-20 bg-white mx-auto mt-4 rounded-md animate-pop"></div>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-xl text-center border border-gray-700">
+          <p>Bounce</p>
+          <div class="w-20 h-20 bg-white mx-auto mt-4 rounded-md animate-bounce"></div>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-xl text-center border border-gray-700">
+          <p>Slide Up</p>
+          <div class="w-20 h-20 bg-white mx-auto mt-4 rounded-md animate-slide-up"></div>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-xl text-center border border-gray-700">
+          <p>Slide Down</p>
+          <div class="w-20 h-20 bg-white mx-auto mt-4 rounded-md animate-slide-down"></div>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-xl text-center border border-gray-700">
+          <p>Slide Left</p>
+          <div class="w-20 h-20 bg-white mx-auto mt-4 rounded-md animate-slide-left"></div>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-xl text-center border border-gray-700">
+          <p>Slide Right</p>
+          <div class="w-20 h-20 bg-white mx-auto mt-4 rounded-md animate-slide-right"></div>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-xl text-center border border-gray-700">
+          <p>Zoom</p>
+          <div class="w-20 h-20 bg-white mx-auto mt-4 rounded-md animate-zoom"></div>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-xl text-center border border-gray-700">
+          <p>Flip</p>
+          <div class="w-20 h-20 bg-white mx-auto mt-4 rounded-md animate-flip"></div>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-xl text-center border border-gray-700">
+          <p>Rotate</p>
+          <div class="w-20 h-20 bg-white mx-auto mt-4 rounded-md animate-rotate"></div>
+        </div>
+      </div>
+    
   </section>
   
   
+  <section class="px-6 py-16 bg-gray-950 text-white font-sans">
+    <div class="container mx-auto p-8">
+      <h1 class="text-4xl font-bold text-center mb-6">Animation Type Showcase</h1>
+      <p class="text-center mb-12">Get to know popular animation styles!</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h2 class="text-xl font-semibold">2D Animation</h2>
+          <p class="mt-2">Traditional flat animation like classic cartoons.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h2 class="text-xl font-semibold">3D Animation</h2>
+          <p class="mt-2">Realistic, computer-generated animation in movies and games.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h2 class="text-xl font-semibold">Stop Motion</h2>
+          <p class="mt-2">Created by photographing objects frame-by-frame.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h2 class="text-xl font-semibold">Motion Graphics</h2>
+          <p class="mt-2">Animated text and shapes, often used in video intros.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h2 class="text-xl font-semibold">Whiteboard Animation</h2>
+          <p class="mt-2">Hand-drawn style animation, ideal for explainer videos.</p>
+        </div>
+      </div>
+    </div>
+  
+  </section>
+
   <!-- Blog Posts -->
   <section class="max-w-4xl mx-auto px-4 py-10 min-h-screen">
     <h3 class="text-3xl font-bold mb-6 text-white">Blog Saya</h3>
