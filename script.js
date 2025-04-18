@@ -180,5 +180,32 @@ function setupAudioPlayer(audioId, playButtonId, progressId, iconId) {
   setupAudioPlayer('audioAAC', 'playPauseAAC', 'audioProgressAAC', 'playPauseIconAAC');
   // Tambahkan setup lainnya sesuai format audio yang Anda punya
 
-    
-    
+// navbar.js
+    document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+  
+    if (menuToggle && menu) {
+      menuToggle.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    }
+  });
+  
+
+//floating button
+const audio = document.getElementById("bg-audio");
+  const toggleBtn = document.getElementById("audio-toggle");
+
+  let isPlaying = false;
+
+  toggleBtn.addEventListener("click", () => {
+    if (isPlaying) {
+      audio.pause();
+      toggleBtn.textContent = "▶️";
+    } else {
+      audio.play();
+      toggleBtn.textContent = "⏸️";
+    }
+    isPlaying = !isPlaying;
+  });
