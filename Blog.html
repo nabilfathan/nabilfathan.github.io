@@ -8,7 +8,47 @@
   <link rel="stylesheet" href="script.js" />
   <script src="script.js" defer></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+  <style>
+     .pop {
+            transform: scale(0); /* Mulai dengan skala 0 untuk animasi */
+            opacity: 0; /* Mulai dengan opacity 0 */
+            transition: transform 0.5s ease, opacity 0.5s ease; /* Transisi untuk efek pop */
+        }
+
+        .pop.visible {
+            transform: scale(1); /* Menampilkan elemen dengan skala 1 */
+            opacity: 1; /* Menampilkan elemen dengan opacity 1 */
+        }
+        .slide {
+            transform: translateX(-100%); /* Mulai dari luar layar */
+            opacity: 0; /* Mulai dengan opacity 0 */
+            transition: transform 0.5s ease, opacity 0.5s ease; /* Transisi untuk efek slide */
+        }
+
+        .slide.visible {
+            transform: translateX(0); /* Menampilkan elemen di posisi normal */
+            opacity: 1; /* Menampilkan elemen dengan opacity 1 */
+        }
+        .special-gothic-expanded-one-regular {
+            font-family: "Special Gothic Expanded One", sans-serif;
+            font-weight: 200;
+            font-style: normal;
+            }
+
+        .poppins-thin {
+              font-family: "Poppins", sans-serif;
+              font-weight: 400;
+              font-style: normal;
+            }
+        .bebas-neue-regular {
+              font-family: "Bebas Neue", sans-serif;
+              font-weight: 400;
+              font-style: normal;
+            }
+  </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
 
@@ -17,8 +57,8 @@
     <div class="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-80 backdrop-blur-md">
         <div class="container mx-auto py-3 sm:flex justify-between items-center sm: text-center ">
             <img src="asset/bg.jpg" class="overlay absolute top-0 left-0 w-full h-full object-cover opacity-30" alt="Background Image overflow-hidden">
-            <h1 class="text-2xl font-bold justify-center text-white relative">Nabilfathan's</h1>
-            <ul class="flex text-xs lg:text-base  text-black lg:text-white lg:space-x-10 space-x-4  items-center sm: justify-center relative ">
+            <h1 class="text-2xl font-bold justify-center text-white relative bebas-neue-regular">Nabilfathan's</h1>
+            <ul class="flex text-xs lg:text-sm  text-black lg:text-white lg:space-x-10 space-x-4  items-center sm: justify-center relative poppins-thin ">
                 <li><a href="index.html#home" class="hover:text-gray-300">Home</a></li>
                 <li><a href="index.html#about" class="hover:text-gray-300">About</a></li>
                 <li><a href="blog.html" class="hover:text-gray-300">Blog</a></li>
@@ -35,11 +75,11 @@
   <section class="max-w-4xl mx-auto px-4 py-5"><!--PDF-->
     <img src="File/3d-dark-grunge-display-background-with-smoky-atmosphere.jpg" class="overlay absolute top-0 left-0 w-full h-full object-cover z-0 "
     alt="Background Image overflow-hidden">
-    <h2 class="text-3xl font-bold text-center text-white relative z-10">Laporan Sistem Multimedia</h2>
-    <p class="text-center text-gray-300 mb-6 relative z-10">Oleh Nabil Alfathan.</p>
+    <h2 class="text-3xl font-bold text-center text-white relative z-10 special-gothic-expanded-one-regular">Laporan Sistem Multimedia</h2>
+    <p class="text-center text-gray-300 mb-6 relative z-10 poppins-thin">Oleh Nabil Alfathan.</p>
   
     <!-- Frame Container -->
-    <div class=" bg-white shadow-xl rounded-2xl border overflow-hidden w-full relative z-40" style="height: 800px;">
+    <div class="pop bg-white shadow-xl rounded-2xl border overflow-hidden w-full relative z-40" style="height: 800px;">
     
       <!-- Header -->
       <div class="bg-gray-900 text-white px-6 py-3 flex justify-between items-center">
