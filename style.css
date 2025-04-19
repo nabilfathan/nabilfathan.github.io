@@ -1,0 +1,68 @@
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+  /* CSS untuk animasi fade */
+.fade {
+    opacity: 0; /* Mulai dengan opacity 0 untuk animasi */
+    transition: opacity 1s ease; /* Transisi untuk efek fade */
+}
+
+.fade.visible {
+    opacity: 1; /* Menampilkan elemen dengan opacity 1 */
+}
+/* CSS untuk animasi pop */
+.pop {
+    transform: scale(0); /* Mulai dengan skala 0 untuk animasi */
+    opacity: 0; /* Mulai dengan opacity 0 */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Transisi untuk efek pop */
+}
+
+.pop.visible {
+    transform: scale(1); /* Menampilkan elemen dengan skala 1 */
+    opacity: 1; /* Menampilkan elemen dengan opacity 1 */
+}
+.slide {
+    transform: translateX(-100%); /* Mulai dari luar layar */
+    opacity: 0; /* Mulai dengan opacity 0 */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Transisi untuk efek slide */
+}
+
+.slide.visible {
+    transform: translateX(0); /* Menampilkan elemen di posisi normal */
+    opacity: 1; /* Menampilkan elemen dengan opacity 1 */
+}
+.typing-animation {
+font-size: 2rem;
+border-right: 2px solid black; /* Efek kursor */
+white-space: nowrap;
+overflow: hidden;
+width: 0; /* Mulai dari lebar 0 */
+transition: width 0.5s ease; /* Transisi halus */
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+    
+}
+
+.special-gothic-expanded-one-regular {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    }
+
+.poppins-thin {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+.bebas-neue-regular {
+      font-family: "Bebas Neue", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }

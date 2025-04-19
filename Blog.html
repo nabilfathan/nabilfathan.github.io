@@ -1,55 +1,28 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blog - Nabil</title>
-  <link src="index.html" rel="stylesheet" href="index.html">
-  <link rel="stylesheet" href="script.js" />
-  <script src="script.js" defer></script>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
-  <style>
-     .pop {
-            transform: scale(0); /* Mulai dengan skala 0 untuk animasi */
-            opacity: 0; /* Mulai dengan opacity 0 */
-            transition: transform 0.5s ease, opacity 0.5s ease; /* Transisi untuk efek pop */
-        }
-
-        .pop.visible {
-            transform: scale(1); /* Menampilkan elemen dengan skala 1 */
-            opacity: 1; /* Menampilkan elemen dengan opacity 1 */
-        }
-        .slide {
-            transform: translateX(-100%); /* Mulai dari luar layar */
-            opacity: 0; /* Mulai dengan opacity 0 */
-            transition: transform 0.5s ease, opacity 0.5s ease; /* Transisi untuk efek slide */
-        }
-
-        .slide.visible {
-            transform: translateX(0); /* Menampilkan elemen di posisi normal */
-            opacity: 1; /* Menampilkan elemen dengan opacity 1 */
-        }
-        .special-gothic-expanded-one-regular {
-            font-family: "Special Gothic Expanded One", sans-serif;
-            font-weight: 200;
-            font-style: normal;
-            }
-
-        .poppins-thin {
-              font-family: "Poppins", sans-serif;
-              font-weight: 400;
-              font-style: normal;
-            }
-        .bebas-neue-regular {
-              font-family: "Bebas Neue", sans-serif;
-              font-weight: 400;
-              font-style: normal;
-            }
-  </style>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog - Nabil</title>
+  
+    <!-- Favicon -->
+    <link rel="icon" href="asset/saturn_planet_icon_263078.png" type="image/x-icon">
+  
+    <!-- Tailwind CSS (versi CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  
+    <!-- CSS Eksternal -->
+    <link rel="stylesheet" href="style.css"> <!-- manggil css -->
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  
+    <!-- Script Eksternal -->
+    <script src="script.js" defer></script> <!--dipanggil dengan benar menggunakan defer -->
+  </head>
+  
 <body class="bg-gray-100 text-gray-800">
 
   <!-- Navbar -->
@@ -99,8 +72,8 @@
   </section>
 <section class="px-6 py-16 bg-gray-950 text-white font-sans"><!--Font-->
   <div class="container mx-auto p-8">
-    <h1 class="text-4xl font-bold text-center mb-6">Font Showcase</h1>
-    <p class="text-center mb-12 text-gray-300">Explore our collection of beautiful fonts!</p>
+    <h1 class="text-4xl font-bold text-center mb-2 special-gothic-expanded-one-regular">Font Showcase</h1>
+    <p class="text-center mb-12 text-gray-300 poppins-thin">Explore our collection of beautiful fonts!</p>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
 
@@ -206,8 +179,8 @@
       
       <section class="px-6 py-16 bg-gray-950 text-white font-sans"><!--Image-->
         <div class="container mx-auto p-8">
-          <h1 class="text-4xl font-bold text-center mb-6">Image Format Showcase</h1>
-          <p class="text-center mb-12 text-gray-300">Explore popular image file formats!</p>
+          <h1 class="text-4xl font-bold text-center mb-2 special-gothic-expanded-one-regular">Image Format Showcase</h1>
+          <p class="text-center mb-12 text-gray-300 poppins-thin">Explore popular image file formats!</p>
       
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
       
@@ -287,8 +260,8 @@
       
       <section class="px-6 py-16"><!--Audio-->
         <div class="container mx-auto p-8 text-white">
-          <h1 class="text-4xl font-bold text-center mb-6">Audio Format Showcase</h1>
-          <p class="text-center mb-12">Explore 10 popular audio formats with the standard player!</p>
+          <h1 class="text-4xl font-bold text-center mb-2 special-gothic-expanded-one-regular">Audio Format Showcase</h1>
+          <p class="text-center mb-12 poppins-thin">Explore 10 popular audio formats with the standard player!</p>
       
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-6">
             <!-- MP3 -->
@@ -435,8 +408,8 @@
       
       <section class="px-6 py-16 bg-gray-950 text-white font-sans"><!--Video-->
         <div class="container mx-auto p-8">
-          <h1 class="text-4xl font-bold text-center mb-6">Video Format Showcase</h1>
-          <p class="text-center mb-12 text-gray-300">Discover common video file formats used across platforms.</p>
+          <h1 class="text-4xl font-bold text-center mb-2 special-gothic-expanded-one-regular">Video Format Showcase</h1>
+          <p class="text-center mb-12 text-gray-300 poppins-thin">Discover common video file formats used across platforms.</p>
       
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-6">
       
@@ -546,8 +519,8 @@
     
     <section class="px-6 py-16 bg-gray-950 text-white font-sans"><!--Animation-->
       <div class="container mx-auto p-8">
-        <h1 class="text-4xl font-bold text-center mb-6">Types of Movie Animation</h1>
-        <p class="text-center mb-12 text-gray-300">Exploration of various animation techniques used in the modern and classic
+        <h1 class="text-4xl font-bold text-center mb-2 special-gothic-expanded-one-regular">Types of Movie Animation</h1>
+        <p class="text-center mb-12 text-gray-300 poppins-thin">Exploration of various animation techniques used in the modern and classic
           film industry.</p>
     
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-6">
@@ -644,18 +617,18 @@
       </div>
     </section>
     
-    <div class="flex justify-center items-center lg:scale-125 hover:scale-110 transition duration-300">
-      <h2 class="bg-white border-2 border-white rounded-3xl  px-4 py-2 text-center font-semibold text-black ">
-        <a href="index.html#home" class="text-blue-600 hover:text-blue-200 transition duration-300"> Back To Home</a>
-      </h2>
+    <div class="flex justify-center items-center hover:scale-110 transition duration-300">
+      <div class="bg-transparent border-2 border-white rounded-3xl px-6 py-2 text-center font-semibold text-black ">
+        <a href="index.html#home" class="text-blue-200 hover:text-blue-600 text-xl transition duration-300 poppins-thin"> Back To Home</a>
+      </div>
     </div>
     
 
   <!-- Blog Posts -->
   <section class="max-w-4xl mx-auto px-4 py-10 ">
-    <h3 class="text-3xl font-bold mb-6 text-white">Blog Saya</h3>
+    <h3 class="text-3xl font-bold mb-6 text-white special-gothic-expanded-one-regular">Blog Saya</h3>
 
-    <div class="space-y-6">
+    <div class="space-y-6 poppins-thin">
       <article class="bg-white shadow p-5 rounded-lg">
         <h4 class="text-xl font-bold mb-1">Pengalaman Pertama Belajar Web</h4>
         <p class="text-sm text-gray-500 mb-2">Diposting 12 April 2025</p>
