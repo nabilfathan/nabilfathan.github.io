@@ -11,6 +11,10 @@
         integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7xj1z5l5c5e5e5e5e5e5e5e5e5e5e5e5e" crossorigin="anonymous" />
     <style src="style.css"></style>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
     <style type="text/tailwindcss">
       
         @keyframes fadeIn {
@@ -62,7 +66,25 @@
         @keyframes blink-caret {
             from, to { border-color: transparent; }
             50% { border-color: black; }
+            
         }
+        .special-gothic-expanded-one-regular {
+            font-family: "Special Gothic Expanded One", sans-serif;
+            font-weight: 200;
+            font-style: normal;
+            }
+
+        .poppins-thin {
+              font-family: "Poppins", sans-serif;
+              font-weight: 400;
+              font-style: normal;
+            }
+        .bebas-neue-regular {
+              font-family: "Bebas Neue", sans-serif;
+              font-weight: 400;
+              font-style: normal;
+            }
+
     </style>
     <title>My Portofolio</title>
 </head>
@@ -74,17 +96,17 @@
             <div class="container mx-auto py-3 sm:flex justify-between items-center sm: text-center ">
                 <img src="asset/bg.jpg" class="overlay absolute top-0 left-0 w-full h-full object-cover opacity-30"
                     alt="Background Image overflow-hidden">
-                <h1 class="text-2xl font-bold justify-center text-white relative">Nabilfathan's</h1>
+                <h1 class="text-2xl font-bold justify-center text-white relative bebas-neue-regular ">Nabilfathan's</h1>
                 
                 <ul
-                    class="flex text-xs lg:text-base  text-black lg:text-white lg:space-x-10 space-x-4  items-center sm: justify-center relative ">
-                    <li><a href="#home" class="hover:text-gray-300">Home</a></li>
-                    <li><a href="#about" class="hover:text-gray-300">About</a></li>
-                    <li><a href="blog.html" class="hover:text-gray-300">Blog</a></li>
-                    <li><a href="#skills" class="hover:text-gray-300">Skills</a></li>
-                    <li><a href="#experience" class="hover:text-gray-300">Experience</a></li>
-                    <li><a href="#portfolio" class="hover:text-gray-300">Portofolio</a></li>
-                    <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+                    class="flex text-xs text-black lg:text-white lg:space-x-10 space-x-4  items-center sm: justify-center relative poppins-thin">
+                    <li><a href="#home" class="hover:text-gray-300">HOME</a></li>
+                    <li><a href="#about" class="hover:text-gray-300">ABOUT</a></li>
+                    <li><a href="blog.html" class="hover:text-gray-300">BLOG</a></li>
+                    <li><a href="#skills" class="hover:text-gray-300">SKILLS</a></li>
+                    <li><a href="#experience" class="hover:text-gray-300">EXPERIENCE</a></li>
+                    <li><a href="#portfolio" class="hover:text-gray-300">PORTOFOLIO</a></li>
+                    <li><a href="#contact" class="hover:text-gray-300">CONTACT</a></li>
                     </ul>
                     </div>
         </div>
@@ -100,13 +122,13 @@
             
             <!-- Konten di atas video -->
             <div class="relative z-10 container px-4 py-10 text-center">
-                <h2 class="text-2xl lg:text-3xl font-bold text-white fade-in mt-4">I'm</h2>
-                <h1 class="lg:text-8xl text-5xl font-extrabold text-white fade-in hover:scale-105 transition-transform duration-300">
+                <h2 class="text-2xl lg:text-3xl font-bold text-white fade-in mt-4 poppins-thin">I'm</h2>
+                <h1 class="lg:text-8xl text-5xl font-extrabold text-white fade-in hover:scale-105 transition-transform duration-300 special-gothic-expanded-one-regular">
                     Nabil Alfathan
                 </h1>
-                <h2 class="text-base lg:text-2xl font-normal text-gray-400 fade-in mt-2">I am an Informatics Engineering Student</h2>
+                <h2 class="text-base lg:text-2xl font-normal text-gray-400 fade-in mt-2 poppins-thin">I am an Informatics Engineering Student</h2>
                 <div class="flex flex-col mx-auto items-center mt-4">  
-                    <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
+                    <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 poppins-thin">
                         <div class="pop text-white bg-neutral-950 py-4 px-24 rounded-lg shadow-lg hover:bg-neutral-900 hover:scale-105 transition-transform-color duration-300">
                             <h2 >Videography</h2>
                         </div>
@@ -128,23 +150,21 @@
         <section id="about" class="group bg-neutral-950 py-10 min-h-screen sm:h-auto scroll-smooth">
             <div class="container mx-auto px-4 min-h-screen ">
                 <div class="text-center mb-10">
-                    <h2 class="text-5xl font-bold text-white pop">About Me</h2>
-                    <p class="text-gray-600 mt-4 fade">Kenali saya lebih dekat</p>
+                    <h2 class="text-5xl font-bold pt-20 text-white pop special-gothic-expanded-one-regular">About Me</h2>
+                    <p class="text-gray-600 mt-2 fade poppins-thin">Kenali saya lebih dekat</p>
                 </div>
                 <div class="flex flex-col lg:flex-row sm:mx-8">
                     <div class="lg:w-1/3 mb-8 lg:mb-0">
                         <img src="asset/Profil.jpg" alt="Profile Picture"
-                        class="pop rounded-full lg:scale-150 w-64 h-64 lg:h-96 lg:w-96 lg:mt-36 items-center mx-auto lg:mx-10 hover:scale-110 transition-transform-border duration-300">
+                        class="pop rounded-full lg:scale-150 w-64 h-64 lg:h-96 lg:w-96 lg:mt-8 items-center mx-auto lg:mx-10 hover:scale-110 transition-transform-border duration-300">
                     </div>
-                    <div class="lg:w-2/3 lg:pl-10 lg:pt-5 text-white px-5 my-auto items-center lg:mt-20">
-                        <p class="text-base lg:text-lg font-normal text-justify mb-4 fade  ">Kenalkan saya <b>Muhammad Nabil Alfathan</b>
-                            yang
-                            merupakan
-                            mahasiswa
+                    <div class="lg:w-2/3 lg:p-10 lg:pt-5 text-white px-5 my-auto items-center poppins-thin lg:mt-">
+                        <p class="text-sm lg:text-base font-normal text-justify mb-4 fade  ">Kenalkan saya <b>Muhammad Nabil Alfathan</b>
+                            yang merupakan mahasiswa
                             Universitas Riau Fakultas Teknik jurusan teknik Informatika. Saya memiliki ketertarikan dan minat
                             yang tinggi kepada kemajuan teknologi. Sangat senang jika saya dapat menjadi orang yang terkemuka di
                             bidang teknologi.</p>
-                        <p class="text-base lg:text-lg font-normal text-justify mb-4 fade">
+                        <p class="text-sm lg:text-base font-normal text-justify mb-4 fade">
                             Alasan saya memilih jurusan Teknik Informatika adalah karena saya memiliki minat yang besar dalam dunia teknologi
                             dan
                             ingin terlibat langsung dalam perkembangannya yang
@@ -156,7 +176,7 @@
                             berbagai permasalahan di berbagai bidang,
                             dan saya ingin menjadi bagian dari perubahan tersebut.
                         </p>
-                        <p class="text-base lg:text-lg font-normal text-justify mb-4 fade">
+                        <p class="text-sm lg:text-base font-normal text-justify mb-4 fade">
                             Saat ini, saya memiliki sedikit kemampuan dalam pemrograman, desain. Saya terus belajar
                             dan
                             mengasah keterampilan saya
@@ -177,7 +197,7 @@
             <div class="relative overflow-hidden py-10">
                 <img src="asset/27230.jpg" class="overlay absolute top-0 left-0 w-full h-full object-cover z-0" alt="Background Image overflow-hidden">
               </a>
-              <div class="space-y-6 relative z-10 p-6 max-w-4xl mx-auto">
+              <div class="space-y-6 relative z-10 p-6 max-w-4xl mx-auto poppins-thin">
                 <h3 class="text-2xl font-semibold text-white mb-6 relative z-40">Postingan Terbaru</h3>
           
                 <div class="pop bg bg-black bg-transparent border-gray-800 border-2 shadow p-5 rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer">
@@ -204,10 +224,10 @@
         <section id="skills" class="bg-neutral-950 py-10 min-h-screen overflow-hidden">
             <div class="container mx-auto px-4 pb-20">
                 <div class="text-center lg:mb-10">
-                    <h2 class="text-5xl font-bold text-white pop">Skills</h2>
-                    <p class="text-gray-200 mt-4 fade">Kemampuan yang saya miliki</p>
+                    <h2 class="text-5xl font-bold text-white pop special-gothic-expanded-one-regular">Skills</h2>
+                    <p class="text-gray-200 mt-2 fade poppins-thin">Kemampuan yang saya miliki</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 scale-90 lg:scale-100">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 scale-90 lg:scale-100 poppins-thin">
                     <div
                         class="pop bg-neutral-950 rounded-lg p-4  hover:scale-105 transition-transform-colors duration-300 hover:bg-neutral-900">
                         <img src="asset/Dsgn.jpg" alt="Skills" class="rounded-lg w-full h-64 mb-2 object-cover">
@@ -257,10 +277,10 @@
         <section id="experience" class="bg-neutral-950 py-10 min-h-screen overflow-hidden">
             <div class="container mx-auto px-4 pb-20">
                 <div class="text-center lg:mb-10">
-                    <h2 class="text-5xl font-bold text-white pop">Experience</h2>
-                    <p class="text-gray-300 mt-4 fade">Pengalaman yang saya miliki</p>
+                    <h2 class="text-5xl font-bold text-white pop special-gothic-expanded-one-regular">Experience</h2>
+                    <p class="text-gray-300 mt-2 fade poppins-thin">Pengalaman yang saya miliki</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:h-svh scale-90 lg:scale-100">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:h-svh scale-90 lg:scale-100 poppins-thin">
                     <div
                         class="slide bg-neutral-950 rounded-lg p-5  hover:scale-105 transition-transform duration-300 hover:bg-neutral-900">
                         <img src="asset/lnyd.jpg" alt="Skills" class="w-full h-auto mx-auto mb-2 object-cover">
@@ -297,10 +317,10 @@
         <section id="portfolio" class="bg-neutral-950 pt-10 lg:min-h-screen pb-5 ">
             <div class="pb-16 container mx-auto px-4">
                 <div class="text-center lg:mb-10">
-                    <h2 class="text-5xl font-bold text-white pop">Portofolio</h2>
-                    <p class="text-gray-300 mt-4 fade">Lihat hasil karya saya</p>
+                    <h2 class="text-5xl font-bold text-white pop special-gothic-expanded-one-regular">Portofolio</h2>
+                    <p class="text-gray-300 mt-2 fade poppins-thin">Lihat hasil karya saya</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 scale-90 lg:scale-100">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 scale-90 lg:scale-100 poppins-thin">
                     <div
                         class="pop fade bg-neutral-950 rounded-lg p-4 hover:shadow-lg hover:scale-105 transition-transform-colors duration-300 hover:bg-neutral-900">
                         <img src="asset/Portofolio Submission_002.png" alt="Project 1" class="rounded-lg w-full h-64 object-cover">
@@ -353,7 +373,7 @@
             </h3>
             <div class="place-items-stretch ">
                 <div class="flex flex-col items-center mt-8 pt-8 text-left">
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-9/12 h-auto lg:h-96 mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-9/12 h-auto lg:h-96 mx-auto poppins-thin">
                         <div class=" bg-gray-950 items-center rounded-xl p-2 ">
                             <h2 class="text-2xl font-semibold text-white pl-2">About</h2>
                             <p class=" text-white text-justify pt-2 pl-2">Seorang yang sedang menempuh pendidikan di Universitas
