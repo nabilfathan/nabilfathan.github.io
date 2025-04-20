@@ -163,3 +163,45 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', handleScrollTriggered);
   handleScrollTriggered(); // Panggil saat halaman dimuat
 });
+
+// pop priview
+const popup = document.getElementById('popup');
+const closePopup = document.getElementById('closePopup');
+const popupTitle = document.getElementById('popupTitle');
+const popupDesc = document.getElementById('popupDesc');
+const popupMedia = document.getElementById('popupMedia');
+
+document.querySelectorAll('.popup-trigger').forEach(el => {
+  el.addEventListener('click', () => {
+    popupTitle.textContent = el.dataset.title;
+    popupDesc.textContent = el.dataset.desc;
+    popupMedia.innerHTML = el.dataset.media;
+    popup.classList.remove('hidden');
+    popup.classList.add('flex', 'show');
+    document.body.classList.add('noscroll');
+  });
+});
+
+function stopVideos() {
+  const videos = popup.querySelectorAll('video');
+  videos.forEach(video => {
+    video.pause();
+    video.currentTime = 0;
+  });
+}
+
+function hidePopup() {
+  popup.classList.remove('show');
+  stopVideos();
+  document.body.classList.remove('noscroll');
+  setTimeout(() => {
+    popup.classList.add('hidden');
+    popup.classList.remove('flex');
+    popupMedia.innerHTML = '';
+  }, 300);
+}
+
+closePopup.addEventListener('click', hidePopup);
+popup.addEventListener('click', (e) => {
+  if (e.target === popup) hidePopup();
+});
